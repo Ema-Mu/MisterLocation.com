@@ -73,23 +73,23 @@ html[lang=en] div.listing-details-container div:nth-child(2) > .col-12:before {
 input:placeholder {
 
 	 font-weight: bold;
-  color: #333333
+  color: #000 !important;
 }
 
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-weight: bold;
-  color: #333333
+  color: #000 !important;
 }
 input::-moz-placeholder { /* Firefox 19+ */
    font-weight: bold;
-  color: #333333
+  color: #000 !important;
 }
 input:-ms-input-placeholder { /* IE 10+ */
    font-weight: bold;
-  color: #333333k;
+  color: #000 !important;k;
 }
 input:-moz-placeholder { /* Firefox 18- */
    font-weight: bold;
-  color: #333333
+  color: #000 !important;
 }
 
