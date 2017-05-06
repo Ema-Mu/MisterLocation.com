@@ -38,7 +38,8 @@ var sanitize_name = function () {
   var name = document.getElementById("listing-author-link");
   if (name !== null) {
   if (name.innerHTML.indexOf(".") !== -1) {
-    alert('test');
+    string = name.innerHTML.split(".", 1);
+    name.innerHTML = string;
   }
 
 }
