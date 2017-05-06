@@ -37,9 +37,9 @@ var sanitize_name = function () {
 
   var name = getElementById("listing-author-link");
   if (name === null) {
-  if (name.innerHTML.indexOf(".") !== -1) {
+
     alert('test');
-  }
+
 
 }
 
@@ -116,7 +116,6 @@ var all_func = function () {
 
   
   set_social_icons();
-  sanitize_name();
   set_labels();
 
 }
