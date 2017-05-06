@@ -32,3 +32,10 @@ display: none;
   display: table;
   padding: 10% 0;
 }
+
+/*  New Listings page */
+
+html[lang=it] #new_listing label[for=listing_description] {
+
+	content: "Descrizione dettagliata in inglese";
+}
