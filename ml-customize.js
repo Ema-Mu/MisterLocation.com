@@ -27,7 +27,7 @@ mobile_menu[0].insertAdjacentHTML('afterend', '<div class="mobilesocial"><a href
 
     }
 
-};
+}
 
 
 
@@ -35,16 +35,16 @@ mobile_menu[0].insertAdjacentHTML('afterend', '<div class="mobilesocial"><a href
 
 var sanitize_name = function () {
 
-  var name = getElementById("listing-author-link");
+  var name = document.getElementById("listing-author-link");
   if (name !== null) {
-
+  if (name.innerHTML.indexOf(".") !== -1) {
     alert('test');
-
+  }
 
 }
 
 
-};
+}
 
 
 
