@@ -116,6 +116,7 @@ var all_func = function () {
 
   
   set_social_icons();
+  sanitize_name();
   set_labels();
 
 }
