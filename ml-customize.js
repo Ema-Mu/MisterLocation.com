@@ -27,7 +27,7 @@ mobile_menu[0].insertAdjacentHTML('afterend', '<div class="mobilesocial"><a href
 
     }
 
-}
+};
 
 
 
@@ -36,7 +36,7 @@ mobile_menu[0].insertAdjacentHTML('afterend', '<div class="mobilesocial"><a href
 var sanitize_name = function () {
 
   var name = getElementById("listing-author-link");
-  if (name === null) {
+  if (name !== null) {
 
     alert('test');
 
@@ -44,7 +44,7 @@ var sanitize_name = function () {
 }
 
 
-}
+};
 
 
 
