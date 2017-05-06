@@ -33,7 +33,7 @@ display: none;
   padding: 10% 0;
 }
 
-/*  New Listings page */
+/*  "New Listings" page */
 
 html[lang=it] #new_listing label[for=listing_description] {
 
@@ -57,6 +57,12 @@ html[lang=it] #new_listing label[for=listing_description]:after {
 html[lang=it] div.listing-details-container div:nth-child(2) > .col-12 > p:before {
 
 	content: "Descrizione in inglese: ";
+	font-weight: bold;
+}
+
+html[lang=en] div.listing-details-container div:nth-child(2) > .col-12 > p:before {
+
+	content: "Description: ";
 	font-weight: bold;
 }
 
