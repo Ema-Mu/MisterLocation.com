@@ -60,7 +60,7 @@ html[lang=it] div.listing-details-container div:nth-child(2) > .col-12 > p:befor
 	font-weight: bold;
 }
 
-html[lang=en] div.listing-details-container div:nth-child(2) > .col-12 > p:before {
+html[lang=en] div.listing-details-container div:nth-child(2) > .col-12:before {
 
 	content: "Description: ";
 	font-weight: bold;
