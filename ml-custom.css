@@ -37,5 +37,26 @@ display: none;
 
 html[lang=it] #new_listing label[for=listing_description] {
 
+	visibility: hidden;
+
+	}
+
+html[lang=it] #new_listing label[for=listing_description]:after {
+
 	content: "Descrizione dettagliata in inglese";
+	visibility: visible;
+  display: block;
+
 }
+
+
+
+
+/* Listing page */
+
+html[lang=it] div.listing-details-container div:nth-child(2) > .col-12 > p:before {
+
+	content: "Descrizione in inglese: ";
+	font-weight: bold;
+}
+
