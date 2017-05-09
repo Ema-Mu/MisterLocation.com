@@ -54,7 +54,7 @@ html[lang=it] #new_listing label[for=listing_description]:after {
 
 /* Listing page */
 
-html[lang=it] div.listing-details-container div:nth-child(2) > .col-12 > p:before {
+html[lang=it] div.listing-details-container div:nth-child(2) > .col-12:before {
 
 	content: "Descrizione in inglese: ";
 	font-weight: bold;
