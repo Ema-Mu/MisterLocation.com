@@ -23,6 +23,13 @@ display: none;
 }
 */
 
+/* hide studio and location categories */
+.visible-tablet > .row > .col-12 > a:nth-child(2), .visible-tablet > .row > .col-12 > a:nth-child(3), {
+
+  display: none;
+}
+/*-------*/
+
 .fa {
 
   color: #4990e2;
