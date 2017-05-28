@@ -23,12 +23,14 @@ display: none;
 }
 */
 
-/* hide studio and location categories */
+/* hide studio and location categories 
 .visible-tablet > .row > .col-12 > a:nth-of-type(2), .visible-tablet > .row > .col-12 > a:nth-of-type(3) {
 
   display: none;
 }
-/*-------*/
+
+*/
+
 
 .fa {
 
