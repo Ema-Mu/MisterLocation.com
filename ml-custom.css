@@ -16,11 +16,13 @@ hyphens: none;
 display: none;
 }
 
+/*
 .visible-tablet > .row > .col-12 {
 
 	display: none;
 }
 
+*/
 .fa {
 
   color: #4990e2;
