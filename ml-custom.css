@@ -104,3 +104,10 @@ input:-moz-placeholder { /* Firefox 18- */
   color: #000 !important;
 }
 
+
+/* Banner height */
+
+.marketplace-lander figure.marketplace-cover {
+  height: 30em;
+}
+
