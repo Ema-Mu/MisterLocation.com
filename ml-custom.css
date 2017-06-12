@@ -105,9 +105,16 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 
-/* Banner height */
+/* Banner height and center slogan */
+
+@media screen and (min-width: 996px) {
 
 .marketplace-lander figure.marketplace-cover {
   height: 30em;
 }
 
+.marketplace-lander .marketplace-lander-content {
+    padding: 10em 1em;
+}
+
+}
