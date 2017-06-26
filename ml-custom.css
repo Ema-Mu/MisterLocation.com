@@ -118,3 +118,9 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 }
+/*
+
+.listing-details-container > div:nth-child(7) > .col-12 > .row > .col-4 > .checkbox-option > .checkbox-option-checkmark > i::before {
+  
+  content: '\20ac';
+}
