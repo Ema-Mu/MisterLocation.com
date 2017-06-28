@@ -29,9 +29,39 @@ mobile_menu[0].insertAdjacentHTML('afterend', '<div class="mobilesocial"><a href
 
 }
 
+var set_chargeble_icons = function () {
+
+
+    var listing_page = document.getElementsByClassName('listing-details-container');
+
+    if(listing_page.length){
+
+    var divs = document.getElementsByClassName('col-12');
+      for (var i = 0, len = divs.length; i < len; ++i) { 
+      if(divs[i].innerHTML.indexOf("<b>Chargeable services and facilities:</b>") != -1) { 
+        var columns = divs[i].querySelectorAll('.row > .col-4');
+        columns_length = columns.length;
+        for (var x = 0, len = columns_length; x < len; ++x) {
+          minirows = columns[x].querySelectorAll('.selected');
+          minirows_length = minirows.length;
+          for (var y = 0, len_m = minirows_length; y < len_m; ++y) {
+            minirows[y].querySelector('.checkbox-option-checkmark > i').setAttribute('class','fa fa-eur icon-fix icon-margin');
+
+    }
+
+
+  }
+
+
+  ;}}
+
+
+  }
+}
 
 
 
+/*
 
 var sanitize_name = function () {
 
@@ -82,8 +112,8 @@ grid_btn.innerHTML = "STUDIO";
 grid_btn2.setAttribute("href", "/?category=location");
 grid_btn2.innerHTML = "LOCATION";
 
-/* var menu = document.querySelector(".visible-tablet > .row > .col-12");
-menu.classList.add("hide"); */
+var menu = document.querySelector(".visible-tablet > .row > .col-12");
+menu.classList.add("hide");
 
 var url = window.location.href;
 
@@ -109,7 +139,7 @@ else if ( (url.indexOf("category=location") !== -1) && (url.indexOf("category=st
 }
 }
 };
-
+*/
 
 
 
@@ -117,6 +147,7 @@ var all_func = function () {
 
   
   set_social_icons();
+  set_chargeble_icons();
   /*sanitize_name();*/
   /* set_labels(); */
 
