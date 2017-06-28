@@ -119,14 +119,12 @@ input:-moz-placeholder { /* Firefox 18- */
 
 }
 
-.icon-margin {
-  padding: 0 5px !important;
-  
-}
 
-/*
 
-.listing-details-container > div:nth-child(7) > .col-12 > .row > .col-4 > .checkbox-option > .checkbox-option-checkmark > i::before {
+
+#chargeable > .row > .col-4 > .checkbox-option > .checkbox-option-checkmark > i::before {
   
   content: '\20ac';
+  font-size: 1.2em;
+  vertical-align: baseline;
 }
