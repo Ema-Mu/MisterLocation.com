@@ -170,10 +170,10 @@ el.text = JSON.stringify({
         "isBasedOn": "https://www.sharetribe.com/",
         "keywords": "photo, studio, photostudio, location, photo studio Milan, photo studio Amsterdam, photo studio Madrid, rent photo studio",
         "about": { "@type": "LocalBusiness",
-        "priceRange":'"'+prices[0].innerHTML+'"',
+        "priceRange":prices[0].innerHTML,
         "paymentAccepted": "PayPal",
-        "image":'"'+images[0].getAttribute('src').split("?")[0]+'"',
-        "name":'"'+titles[0].innerHTML+'"'
+        "image":images[0].getAttribute('src').split("?")[0],
+        "name":titles[0].innerHTML
       }
 
          }});
