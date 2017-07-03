@@ -193,7 +193,7 @@ el.text = JSON.stringify({
       "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Cleaning services",
-          "itemListElement": jsonArr}
+          "itemListElement": jsonArr},
 
        "mainEntityOfPage": {
             "@type": "WebSite",
