@@ -141,7 +141,12 @@ else if ( (url.indexOf("category=location") !== -1) && (url.indexOf("category=st
 };
 */
 
+var getPathFromUrl = function(url) {
+  return url.split("?")[0];
+}
+
 var schema = function () {
+
 
 var titles = document.getElementsByClassName('fluid-thumbnail-grid-image-title');
 var prices = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
@@ -172,7 +177,7 @@ el.text = JSON.stringify({
         "about": { "@type": "LocalBusiness",
         "priceRange":prices[0].innerHTML,
         "paymentAccepted": "PayPal",
-        "image":images[0].getAttribute('src').split("?")[0],
+        "image":getPathFromUrl(images[0].getAttribute('src'));,
         "name":titles[0].innerHTML
       }
 
