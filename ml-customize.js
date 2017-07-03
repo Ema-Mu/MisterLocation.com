@@ -165,6 +165,8 @@ for (i=0;i<titles.length;i++) {
       }
     );
 
+}
+
 el.text = JSON.stringify({ 
 
       "@context" : "http://schema.org",
