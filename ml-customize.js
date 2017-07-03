@@ -156,14 +156,14 @@ var el = document.createElement('script');
 el.type = 'application/ld+json';  
 var jsonArr = [];
 for (i=0;i<titles.length;i++) {
-  jsonArr.push({
+  jsonArr.push(
        { "@type": "LocalBusiness",
         "priceRange": prices[i].innerHTML,
         "paymentAccepted": "PayPal",
         "image": images[i].getAttribute('src'),
         "name": titles[i].innerHTML
       }
-    });
+    );
 
 el.text = JSON.stringify({ 
 
