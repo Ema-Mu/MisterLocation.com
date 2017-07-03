@@ -156,7 +156,7 @@ var el = document.createElement('script');
 el.type = 'application/ld+json';  
 var jsonArr = [];
 for (i=0;i<titles.length;i++) {
-  if(titles.length===images.length){
+  if(images[i]!=null){
   jsonArr.push(
        { "@type": "LocalBusiness",
         "priceRange": prices[i].innerHTML,
@@ -165,17 +165,7 @@ for (i=0;i<titles.length;i++) {
         "name": titles[i].innerHTML
       }
     );
-  } else {
-    jsonArr.push(
-       { "@type": ["ListItem", "LocalBusiness"],
-        "priceRange": prices[i].innerHTML,
-        "paymentAccepted": "PayPal",
-        "name": titles[i].innerHTML
-      }
-    );
-
-
-  }
+  } 
 
 }
 
