@@ -147,7 +147,7 @@ var schema = function () {
 
 var home = document.getElementById('homepage-filters');
 
-if (home != null) {
+if (home !== null) {
 
 
 var titles = document.getElementsByClassName('fluid-thumbnail-grid-image-title');
