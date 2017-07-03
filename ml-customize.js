@@ -190,14 +190,18 @@ el.text = JSON.stringify({
       "description": "Find and book photo studios and locations",
       "disambiguatingDescription": "Find and book photo studios and locations",
 
+      "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Cleaning services",
+          "itemListElement": jsonArr,
+
        "mainEntityOfPage": {
             "@type": "WebSite",
         "name": "MisterLocation",
         "alternateName": "Mister Location",
         "url": "https://www.misterlocation.com",
         "isBasedOn": "https://www.sharetribe.com/",
-        "keywords": "photo, studio, photostudio, location, photo studio Milan, photo studio Amsterdam, photo studio Madrid, rent photo studio",
-        "about": jsonArr
+        "keywords": "photo, studio, photostudio, location, photo studio Milan, photo studio Amsterdam, photo studio Madrid, rent photo studio"
 
          }});
 
