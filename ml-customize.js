@@ -172,7 +172,7 @@ el.text = JSON.stringify({
         "about": { "@type": "LocalBusiness",
         "priceRange": '"' + prices[0].innerHTML + '"',
         "paymentAccepted": "PayPal",
-        "image": '"' + images[0].getAttribute('src') + '"',
+        "image": '"' + images[0].getAttribute('src').split("?")[0] + '"',
         "name": '"' + titles[0].innerHTML + '"'
       }
 
