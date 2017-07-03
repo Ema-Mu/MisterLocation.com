@@ -160,7 +160,7 @@ for (i=0;i<titles.length;i++) {
        { "@type": "LocalBusiness",
         "priceRange": prices[i].innerHTML,
         "paymentAccepted": "PayPal",
-        "image": images[i].getAttribute('src'),
+        "image": images[i].getAttribute('src').split("?")[0],
         "name": titles[i].innerHTML
       }
     );
