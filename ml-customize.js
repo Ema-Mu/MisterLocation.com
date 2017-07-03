@@ -167,7 +167,7 @@ for (i=0;i<titles.length;i++) {
     );
   } else {
     jsonArr.push(
-       { "@type": "LocalBusiness",
+       { "@type": ["ListItem", "LocalBusiness"],
         "priceRange": prices[i].innerHTML,
         "paymentAccepted": "PayPal",
         "name": titles[i].innerHTML
