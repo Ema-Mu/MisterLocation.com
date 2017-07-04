@@ -251,7 +251,7 @@ var schema = function () {
             "alternateName": "Mister Location",
              "logo": "https://user-assets.sharetribe.com/images/communities/wide_logos/36321/header_highres/MIsterlocationlogo_horiz.jpg",
             "url" : "https://www.misterlocation.com",
-            "offers": {
+            "hasOfferCatalog": {
                 "@type": "Offer",
                 "name": name.innerHTML,
                 "itemListElement": { "@type": "LocalBusiness",
