@@ -147,7 +147,8 @@ var schema = function () {
 
   var home = document.getElementById('homepage-filters');
   var map = document.getElementsByClassName('origin');
-  var h = document.getElementsByTagName('head')[0]; 
+  var h = document.getElementsByTagName('head')[0];
+  var address = document.getElementById('origin_loc_address').value; 
 
     if (home != null) {
 
@@ -259,7 +260,7 @@ var schema = function () {
                                       "photos": {"@type": "ImageGallery",
                                       "primaryImageOfPage": mainimage,
                                       "image": jsonArr},
-                                      "address": map[0].innerHTML,   
+                                      "address": address,   
                                       "priceRange": price[0].innerHTML,
                                       "paymentAccepted": ["PayPal", "Credit card"],
                                       "amenityFeature": jsonArrAm
