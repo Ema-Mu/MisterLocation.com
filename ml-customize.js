@@ -259,7 +259,7 @@ var schema = function () {
                                       "name": name.innerHTML,
                                       "photos": {"@type": "ImageGallery",
                                       "primaryImageOfPage": mainimage,
-                                      "image": jsonArr},
+                                      "itemListElement": jsonArr},
                                       "address": address,   
                                       "priceRange": price[0].innerHTML,
                                       "paymentAccepted": ["PayPal", "Credit card"],
