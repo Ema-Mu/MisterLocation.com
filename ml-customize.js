@@ -145,63 +145,140 @@ else if ( (url.indexOf("category=location") !== -1) && (url.indexOf("category=st
 
 var schema = function () {
 
-var home = document.getElementById('homepage-filters');
+  var home = document.getElementById('homepage-filters');
+  var map = document.getElementsByClassName('origin');
+  var h = document.getElementsByTagName('head')[0]; 
 
-if (home != null) {
+    if (home != null) {
 
 
-var titles = document.getElementsByClassName('fluid-thumbnail-grid-image-title');
-var prices = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
-var images = document.getElementsByClassName('fluid-thumbnail-grid-image-image');
-var h = document.getElementsByTagName('head')[0];  
+      var titles = document.getElementsByClassName('fluid-thumbnail-grid-image-title');
+      var prices = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
+      var images = document.getElementsByClassName('fluid-thumbnail-grid-image-image');
+      
 
-//create JSON-LD for lastModified and citation_online_date
-var el = document.createElement('script');  
-el.type = 'application/ld+json';  
-var jsonArr = [];
-for (i=0;i<titles.length;i++) {
-  if(images[i]!=null){
-  jsonArr.push(
-       { "@type": "LocalBusiness",
-        "priceRange": prices[i].innerHTML,
-        "paymentAccepted": "PayPal",
-        "image": images[i].getAttribute('src').split("?")[0],
-        "name": titles[i].innerHTML
+      //create JSON-LD for lastModified and citation_online_date
+      var el = document.createElement('script');  
+      el.type = 'application/ld+json';  
+      var jsonArr = [];
+      for (i=0;i<titles.length;i++) {
+        if(images[i]!=null){
+        jsonArr.push(
+             { "@type": "LocalBusiness",
+              "priceRange": prices[i].innerHTML,
+              "image": images[i].getAttribute('src').split("?")[0],
+              "name": titles[i].innerHTML
+            }
+          );
+        } 
+
       }
-    );
-  } 
 
-}
+      el.text = JSON.stringify({ 
 
-el.text = JSON.stringify({ 
+            "@context" : "http://schema.org",
+            "@type" : "Organization",
+            "name": "MisterLocation",
+            "alternateName": "Mister Location",
+             "logo": "https://user-assets.sharetribe.com/images/communities/wide_logos/36321/header_highres/MIsterlocationlogo_horiz.jpg",
+            "url" : "https://www.misterlocation.com",
+            "description": "Find and book photo studios and locations",
+            "disambiguatingDescription": "Find and book photo studios and locations",
 
-      "@context" : "http://schema.org",
-      "@type" : "Organization",
-      "name": "MisterLocation",
-      "alternateName": "Mister Location",
-       "logo": "https://user-assets.sharetribe.com/images/communities/wide_logos/36321/header_highres/MIsterlocationlogo_horiz.jpg",
-      "url" : "https://www.misterlocation.com",
-      "description": "Find and book photo studios and locations",
-      "disambiguatingDescription": "Find and book photo studios and locations",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Photo studios and locations",
+                "itemListElement": jsonArr},
 
-      "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Photo studios and locations",
-          "itemListElement": jsonArr},
+             "mainEntityOfPage": {
+                  "@type": "WebSite",
+              "name": "MisterLocation",
+              "alternateName": "Mister Location",
+              "url": "https://www.misterlocation.com",
+              "isBasedOn": "https://www.sharetribe.com/",
+              "keywords": "photo, studio, photostudio, location, photo studio Milan, photo studio Amsterdam, photo studio Madrid, rent photo studio"
 
-       "mainEntityOfPage": {
-            "@type": "WebSite",
-        "name": "MisterLocation",
-        "alternateName": "Mister Location",
-        "url": "https://www.misterlocation.com",
-        "isBasedOn": "https://www.sharetribe.com/",
-        "keywords": "photo, studio, photostudio, location, photo studio Milan, photo studio Amsterdam, photo studio Madrid, rent photo studio"
+               }});
+      h.appendChild(el);
 
-         }});
+    } else if ((home === null)&&(map.length === 1)) {  /* Listing page */
+
+     
+
+      var price = document.getElementsByClassName('listing-price-amount');
+      var name = document.getElementById('listing-title');
+      var images = document.getElementsByClassName('listing-image');
+      var amenities = document.getElementsByClassName('selected');
+      var jsonArr = [];
+      var jsonArrAm = [];
+
+      if(amenities[2]!=null){
+        for(i=2;i<amenities.length;i++){
+          var spans = amenities[i].getElementsByTagName('span');
+          jsonArrAm.push(
+            { "@type": "LocationFeatureSpecification",
+              "name": spans[1].innerHTML
+            }
+          );
+
+        }
+      }
+
+      
+
+      var el = document.createElement('script');  
+      el.type = 'application/ld+json';  
+     
+
+       if(images[0]!=null){
+        var mainimage = images[0].getAttribute('src').split("?")[0];
+        for (i=0;i<images.length;i++){
+        jsonArr.push(
+             { "@type": "ImageObject",
+              "image": images[i].getAttribute('src').split("?")[0]
+            }
+          );
+        } 
+
+      }
 
 
-h.appendChild(el);
-}
+      el.text = JSON.stringify({
+
+         "@context" : "http://schema.org",
+            "@type" : "Organization",
+            "name": "MisterLocation",
+            "alternateName": "Mister Location",
+             "logo": "https://user-assets.sharetribe.com/images/communities/wide_logos/36321/header_highres/MIsterlocationlogo_horiz.jpg",
+            "url" : "https://www.misterlocation.com",
+            "offers": {
+                "@type": "Offer",
+                "name": name.innerHTML,
+                "itemListElement": { "@type": "LocalBusiness",
+                                      "name": name.innerHTML,
+                                      "photos": {"@type": "ImageGallery",
+                                      "primaryImageOfPage": mainimage,
+                                      "image": jsonArr},
+                                      "address": map[0].innerHTML,   
+                                      "priceRange": price[0].innerHTML,
+                                      "paymentAccepted": ["PayPal", "Credit card"],
+                                      "amenityFeature": jsonArrAm
+                                    }
+                                      
+            },
+
+             "mainEntityOfPage": {
+                  "@type": "WebSite",
+              "name": "MisterLocation",
+              "alternateName": "Mister Location",
+              "url": "https://www.misterlocation.com",
+              "isBasedOn": "https://www.sharetribe.com/",
+              "keywords": "photo, studio, photostudio, location, photo studio Milan, photo studio Amsterdam, photo studio Madrid, rent photo studio"
+
+      }});
+      h.appendChild(el);
+
+    }
 }
 
 
