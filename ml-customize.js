@@ -186,7 +186,6 @@ var schema = function () {
             "sameAs" : ["https://www.facebook.com/misterlocationOfficial", "https://twitter.com/Mister_Location", "https://www.instagram.com/misterlocation/"],
             "description": "Find and book photo studios and locations",
             "disambiguatingDescription": "Find and book photo studios and locations",
-
             "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": "Photo studios and locations",
@@ -257,6 +256,7 @@ var schema = function () {
             "alternateName": "Mister Location",
              "logo": "https://user-assets.sharetribe.com/images/communities/wide_logos/36321/header_highres/MIsterlocationlogo_horiz.jpg",
             "url" : "https://www.misterlocation.com",
+            "sameAs" : ["https://www.facebook.com/misterlocationOfficial", "https://twitter.com/Mister_Location", "https://www.instagram.com/misterlocation/"],
             "hasOfferCatalog": {
                 "@type": "OfferCatalog",
                 "name": name.innerHTML,
