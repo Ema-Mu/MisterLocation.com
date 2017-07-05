@@ -261,6 +261,7 @@ var schema = function () {
                 "name": name.innerHTML,
                 "itemListElement": { "@type": "LocalBusiness",
                                       "name": name.innerHTML,
+                                      "image": mainimage,
                                       "photos": {"@type": "ImageGallery",
                                       "primaryImageOfPage": mainimage,
                                       "photos": jsonArr},
