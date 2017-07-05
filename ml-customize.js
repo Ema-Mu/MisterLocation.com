@@ -214,7 +214,6 @@ var schema = function () {
       var name = document.getElementById('listing-title');
       var images = document.getElementsByClassName('listing-image');
       var amenities = document.getElementsByClassName('selected');
-      var jsonArr = [];
       var jsonArrAm = [];
 
       if(amenities[2]!=null){
@@ -237,6 +236,7 @@ var schema = function () {
 
        if(images[0]!=null){
         var mainimage = images[0].getAttribute('src').split("?")[0];
+        var jsonArr = [{"@type": "ImageGallery", "primaryImageOfPage": mainimage}];
         for (i=0;i<images.length;i++){
         jsonArr.push(
              { "@type": "ImageObject",
@@ -263,9 +263,7 @@ var schema = function () {
                 "itemListElement": { "@type": "LocalBusiness",
                                       "name": name.innerHTML,
                                       "image": mainimage,
-                                      "photos": {"@type": "ImageGallery",
-                                      "primaryImageOfPage": mainimage,
-                                      "photos": jsonArr},
+                                      "photos": jsonArr,
                                       "address": address,   
                                       "priceRange": price[0].innerHTML,
                                       "paymentAccepted": ["PayPal", "Credit card"],
