@@ -197,6 +197,10 @@ var schema = function () {
               "alternateName": "Mister Location",
               "url": "https://www.misterlocation.com",
               "isBasedOn": "https://www.sharetribe.com/",
+              /*"breadcrumb" : {
+                              "@type" : "BreadCrumbList",
+                              "itemListElement": jsonBread
+              }*/
               "keywords": "photo, studio, photostudio, location, photo studio Milan, photo studio Amsterdam, photo studio Madrid, rent photo studio"
 
                }});
@@ -259,7 +263,7 @@ var schema = function () {
                                       "name": name.innerHTML,
                                       "photos": {"@type": "ImageGallery",
                                       "primaryImageOfPage": mainimage,
-                                      "itemListElement": jsonArr},
+                                      "photos": jsonArr},
                                       "address": address,   
                                       "priceRange": price[0].innerHTML,
                                       "paymentAccepted": ["PayPal", "Credit card"],
