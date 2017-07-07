@@ -141,7 +141,7 @@ else if ( (url.indexOf("category=location") !== -1) && (url.indexOf("category=st
 };
 */
 
-
+/*
 
 var schema = function () {
 
@@ -200,13 +200,13 @@ var schema = function () {
               /*"breadcrumb" : {
                               "@type" : "BreadCrumbList",
                               "itemListElement": jsonBread
-              }*/
+              }
               "keywords": "photo, studio, photostudio, location, photo studio Milan, photo studio Amsterdam, photo studio Madrid, rent photo studio"
 
                }});
       h.appendChild(el);
 
-    } else if ((home === null)&&(map.length === 1)) {  /* Listing page */
+    } else if ((home === null)&&(map.length === 1)) {  /* Listing page 
 
      
 
@@ -285,7 +285,7 @@ var schema = function () {
 
     }
 }
-
+*/
 
 
 var all_func = function () {
@@ -293,7 +293,7 @@ var all_func = function () {
   
   set_social_icons();
   set_chargeble_icons();
-  schema();
+  /*schema();*/
   /*sanitize_name();*/
   /* set_labels(); */
 
