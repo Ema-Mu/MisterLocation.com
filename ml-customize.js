@@ -61,7 +61,7 @@ var set_chargeble_icons = function () {
 
 
 
-/*
+/* test
 
 var sanitize_name = function () {
 
