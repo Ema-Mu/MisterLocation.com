@@ -141,7 +141,7 @@ else if ( (url.indexOf("category=location") !== -1) && (url.indexOf("category=st
 };
 */
 
-/*
+
 
 var schema = function () {
 
@@ -149,7 +149,7 @@ var schema = function () {
   var map = document.getElementsByClassName('origin');
   var h = document.getElementsByTagName('head')[0];
   var address = document.getElementById('origin_loc_address').value; 
-
+/*
     if (home != null) {
 
 
@@ -206,7 +206,7 @@ var schema = function () {
                }});
       h.appendChild(el);
 
-    } else if ((home === null)&&(map.length === 1)) {  /* Listing page 
+    } else */ if ((home === null)&&(map.length === 1)) {  
 
      
 
@@ -285,7 +285,7 @@ var schema = function () {
 
     }
 }
-*/
+
 
 
 var all_func = function () {
@@ -293,7 +293,7 @@ var all_func = function () {
   
   set_social_icons();
   set_chargeble_icons();
-  /*schema();*/
+  schema();
   /*sanitize_name();*/
   /* set_labels(); */
 
