@@ -178,7 +178,7 @@ var schema = function () {
 
       el.text = JSON.stringify(
 
-            {
+            [{
               "@context": "http://schema.org",
               "@type": "WebSite",
               "url": "https://www.misterlocation.com/",
@@ -201,7 +201,7 @@ var schema = function () {
             "description": "Find and book photo studios and locations",
             "disambiguatingDescription": "Find and book photo studios and locations"
       
-            });
+            }]);
       h.appendChild(el);
 
     } else  if ((home === null)&&(map.length === 1)) {  
