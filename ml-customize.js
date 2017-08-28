@@ -161,7 +161,9 @@ var schema = function () {
 
       //create JSON-LD for lastModified and citation_online_date
       var el = document.createElement('script');  
-      el.type = 'application/ld+json';  
+      var el2 = document.createElement('script');
+      el.type = 'application/ld+json';
+      el2.type = 'application/ld+json';  
      /* var jsonArr = [];
       for (i=0;i<titles.length;i++) {
         if(images[i]!=null){
@@ -187,8 +189,27 @@ var schema = function () {
               "target": "https://www.misterlocation.com/?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
+            }
+
+
+         );
+
+      el2.text = JSON.stringify(   { 
+            "@context" : "http://schema.org",
+            "@type" : "Organization",
+            "name": "MisterLocation",
+            "alternateName": "Mister Location",
+             "logo": "https://user-assets.sharetribe.com/images/communities/wide_logos/36321/header_highres/MIsterlocationlogo_horiz.jpg",
+            "url" : "https://www.misterlocation.com",
+            "sameAs" : ["https://www.facebook.com/misterlocationOfficial", "https://twitter.com/Mister_Location", "https://www.instagram.com/misterlocation/"],
+            "description": "Find and book photo studios and locations",
+            "disambiguatingDescription": "Find and book photo studios and locations"
+      
             });
+
+
       h.appendChild(el);
+      h.appendChild(el2);
 
     } else  if ((home === null)&&(map.length === 1)) {  
 
