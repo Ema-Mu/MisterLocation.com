@@ -187,20 +187,6 @@ var schema = function () {
               "target": "https://www.misterlocation.com/?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }]
-            },
-
-
-            { 
-            "@context" : "http://schema.org",
-            "@type" : "Organization",
-            "name": "MisterLocation",
-            "alternateName": "Mister Location",
-             "logo": "https://user-assets.sharetribe.com/images/communities/wide_logos/36321/header_highres/MIsterlocationlogo_horiz.jpg",
-            "url" : "https://www.misterlocation.com",
-            "sameAs" : ["https://www.facebook.com/misterlocationOfficial", "https://twitter.com/Mister_Location", "https://www.instagram.com/misterlocation/"],
-            "description": "Find and book photo studios and locations",
-            "disambiguatingDescription": "Find and book photo studios and locations"
-      
             });
       h.appendChild(el);
 
