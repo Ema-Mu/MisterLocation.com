@@ -245,14 +245,14 @@ var schema = function () {
 
        if(images[0]!=null){
         var mainimage = images[0].getAttribute('src').split("?")[0];
-        var jsonArr = [{"@type": "ImageGallery", "primaryImageOfPage": mainimage}];
+       /* var jsonArr = [{"@type": "ImageGallery", "primaryImageOfPage": mainimage}];
         for (i=0;i<images.length;i++){
         jsonArr.push(
              { "@type": "ImageObject",
               "image": images[i].getAttribute('src').split("?")[0]
             }
           );
-        } 
+        } */
 
       }
 
