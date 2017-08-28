@@ -151,7 +151,7 @@ var schema = function () {
   var h = document.getElementsByTagName('head')[0];
   /*var address = document.getElementById('origin_loc_address').value; */
 
-    if (home != null) {
+    if (home !== null) {
 
 
       /*var titles = document.getElementsByClassName('fluid-thumbnail-grid-image-title');
