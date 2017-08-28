@@ -212,7 +212,7 @@ var schema = function () {
      
 
       var price = document.getElementsByClassName('listing-price-amount');
-      var price_raw = price[0].innerHTML.substr(2);
+      var price_raw = price[0].innerHTML;
       var name = document.getElementById('listing-title');
       var images = document.getElementsByClassName('listing-image');
       var url_splitted = window.location.href.split( "/listings/");
