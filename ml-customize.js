@@ -212,6 +212,7 @@ var schema = function () {
      
 
       var price = document.getElementsByClassName('listing-price-amount');
+      var price_raw = price[0].innerHTML.substr(2);
       var name = document.getElementById('listing-title');
       var images = document.getElementsByClassName('listing-image');
       var url_splitted = window.location.href.split( "/listings/");
@@ -262,7 +263,7 @@ var schema = function () {
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "EUR",
-                "price": price[0].innerHTML.substr(2),
+                "price": price_raw,
                 "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
                 "seller" : {
                   "@type" : "Organization",
