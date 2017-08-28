@@ -150,7 +150,7 @@ var schema = function () {
   var map = document.getElementsByClassName('origin');
   var h = document.getElementsByTagName('head')[0];
   var address = document.getElementById('origin_loc_address').value; 
-/*
+
     if (home != null) {
 
 
@@ -162,7 +162,7 @@ var schema = function () {
       //create JSON-LD for lastModified and citation_online_date
       var el = document.createElement('script');  
       el.type = 'application/ld+json';  
-      var jsonArr = [];
+     /* var jsonArr = [];
       for (i=0;i<titles.length;i++) {
         if(images[i]!=null){
         jsonArr.push(
@@ -174,10 +174,23 @@ var schema = function () {
           );
         } 
 
-      }
+      } */
 
-      el.text = JSON.stringify({ 
+      el.text = JSON.stringify(
 
+            {
+              "@context": "http://schema.org",
+              "@type": "WebSite",
+              "url": "https://www.misterlocation.com/",
+              "potentialAction": [{
+              "@type": "SearchAction",
+              "target": "https://www.misterlocation.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }]
+            },
+
+
+            { 
             "@context" : "http://schema.org",
             "@type" : "Organization",
             "name": "MisterLocation",
@@ -186,28 +199,12 @@ var schema = function () {
             "url" : "https://www.misterlocation.com",
             "sameAs" : ["https://www.facebook.com/misterlocationOfficial", "https://twitter.com/Mister_Location", "https://www.instagram.com/misterlocation/"],
             "description": "Find and book photo studios and locations",
-            "disambiguatingDescription": "Find and book photo studios and locations",
-            "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Photo studios and locations",
-                "itemListElement": jsonArr},
-
-             "mainEntityOfPage": {
-                  "@type": "WebSite",
-              "name": "MisterLocation",
-              "alternateName": "Mister Location",
-              "url": "https://www.misterlocation.com",
-              "isBasedOn": "https://www.sharetribe.com/",
-              /*"breadcrumb" : {
-                              "@type" : "BreadCrumbList",
-                              "itemListElement": jsonBread
-              }
-              "keywords": "photo, studio, photostudio, location, photo studio Milan, photo studio Amsterdam, photo studio Madrid, rent photo studio"
-
-               }});
+            "disambiguatingDescription": "Find and book photo studios and locations"
+      
+            });
       h.appendChild(el);
 
-    } else */ if ((home === null)&&(map.length === 1)) {  
+    } else  if ((home === null)&&(map.length === 1)) {  
 
      
 
@@ -218,8 +215,8 @@ var schema = function () {
       var url_splitted = window.location.href.split( "/listings/");
       var url_last_part = url_splitted[1].split("-");
       mpn = url_last_part[0];
-      /*var amenities = document.getElementsByClassName('selected');*/
-      var jsonArrAm = [];
+      /*var amenities = document.getElementsByClassName('selected');
+      var jsonArrAm = [];*/
       /*
       if(amenities[2]!=null){
         for(i=2;i<amenities.length;i++){
