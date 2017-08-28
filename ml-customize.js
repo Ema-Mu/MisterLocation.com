@@ -262,7 +262,7 @@ var schema = function () {
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "EUR",
-                "price": price[0].innerHTML,
+                "price": price[0].innerHTML.substr(2),
                 "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
                 "seller" : {
                   "@type" : "Organization",
