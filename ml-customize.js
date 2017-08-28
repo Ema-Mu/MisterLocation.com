@@ -182,11 +182,11 @@ var schema = function () {
               "@context": "http://schema.org",
               "@type": "WebSite",
               "url": "https://www.misterlocation.com/",
-              "potentialAction": [{
+              "potentialAction": {
               "@type": "SearchAction",
               "target": "https://www.misterlocation.com/?q={search_term_string}",
     "query-input": "required name=search_term_string"
-  }]
+  }
             });
       h.appendChild(el);
 
