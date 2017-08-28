@@ -149,7 +149,7 @@ var schema = function () {
   var home = document.getElementById('homepage-filters');
   var map = document.getElementsByClassName('origin');
   var h = document.getElementsByTagName('head')[0];
-  var address = document.getElementById('origin_loc_address').value; 
+  /*var address = document.getElementById('origin_loc_address').value; */
 
     if (home != null) {
 
