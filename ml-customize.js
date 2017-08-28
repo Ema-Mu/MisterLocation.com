@@ -29,6 +29,7 @@ mobile_menu[0].insertAdjacentHTML('afterend', '<div class="mobilesocial"><a href
 
 }
 
+
 var set_chargeble_icons = function () {
 
 
@@ -213,9 +214,12 @@ var schema = function () {
       var price = document.getElementsByClassName('listing-price-amount');
       var name = document.getElementById('listing-title');
       var images = document.getElementsByClassName('listing-image');
-      var amenities = document.getElementsByClassName('selected');
+      var url_splitted = window.location.href.split( "/listings/");
+      var url_last_part = url_splitted[1].split("-");
+      mpn = url_last_part[0];
+      /*var amenities = document.getElementsByClassName('selected');*/
       var jsonArrAm = [];
-
+      /*
       if(amenities[2]!=null){
         for(i=2;i<amenities.length;i++){
           var spans = amenities[i].getElementsByTagName('span');
@@ -226,7 +230,7 @@ var schema = function () {
           );
 
         }
-      }
+      } */
 
       
 
@@ -251,36 +255,31 @@ var schema = function () {
       el.text = JSON.stringify({
 
          "@context" : "http://schema.org",
-            "@type" : "Organization",
-            "name": "MisterLocation",
-            "alternateName": "Mister Location",
-             "logo": "https://user-assets.sharetribe.com/images/communities/wide_logos/36321/header_highres/MIsterlocationlogo_horiz.jpg",
-            "url" : "https://www.misterlocation.com",
-            "sameAs" : ["https://www.facebook.com/misterlocationOfficial", "https://twitter.com/Mister_Location", "https://www.instagram.com/misterlocation/"],
-            "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": name.innerHTML,
-                "itemListElement": { "@type": "LocalBusiness",
-                                      "name": name.innerHTML,
-                                      "image": mainimage,
-                                      "photos": jsonArr,
-                                      "address": address,   
-                                      "priceRange": price[0].innerHTML,
-                                      "paymentAccepted": ["PayPal", "Credit card"],
-                                      "amenityFeature": jsonArrAm
-                                    }
+            "@type" : "Product",
+            "name": name.innerHTML,
+            "image": mainimage,
+            "photos": jsonArr,
+            "mpn": mpn,
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "EUR",
+                "price": price[0].innerHTML,
+                "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
+                "seller" : {
+                  "@type" : "Organization",
+                  "name": "MisterLocation",
+                  "alternateName": "Mister Location",
+                  "logo": "https://user-assets.sharetribe.com/images/communities/wide_logos/36321/header_highres/MIsterlocationlogo_horiz.jpg",
+                  "url" : "https://www.misterlocation.com",
+                  "sameAs" : ["https://www.facebook.com/misterlocationOfficial", "https://twitter.com/Mister_Location", "https://www.instagram.com/misterlocation/"],
+                  "description": "Find and book photo studios and locations",
+                  "disambiguatingDescription": "Find and book photo studios and locations",
+                }
+
                                       
-            },
+            }
 
-             "mainEntityOfPage": {
-                  "@type": "WebSite",
-              "name": "MisterLocation",
-              "alternateName": "Mister Location",
-              "url": "https://www.misterlocation.com",
-              "isBasedOn": "https://www.sharetribe.com/",
-              "keywords": "photo, studio, photostudio, location, photo studio Milan, photo studio Amsterdam, photo studio Madrid, rent photo studio"
-
-      }});
+      });
       h.appendChild(el);
 
     }
