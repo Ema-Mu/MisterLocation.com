@@ -240,14 +240,14 @@ var schema = function () {
 
        if(images[0]!=null){
         var mainimage = images[0].getAttribute('src').split("?")[0];
-        /*var jsonArr = [{"@type": "ImageGallery", "primaryImageOfPage": mainimage}];
+        var jsonArr = [{"@type": "ImageGallery", "primaryImageOfPage": mainimage}];
         for (i=0;i<images.length;i++){
         jsonArr.push(
              { "@type": "ImageObject",
               "image": images[i].getAttribute('src').split("?")[0]
             }
           );
-        } */
+        } 
 
       }
 
@@ -257,12 +257,12 @@ var schema = function () {
          "@context" : "http://schema.org",
             "@type" : "Product",
             "name": name.innerHTML,
-            "photos": jsonArr,
+            "image": mainimage,
             "mpn": mpn,
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "EUR",
-                "price": price[0].innerHTML.substr(2),
+                "price": price[0].innerHTML,
                 "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
                 "seller" : {
                   "@type" : "Organization",
