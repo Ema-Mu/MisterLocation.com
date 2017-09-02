@@ -153,10 +153,10 @@ var tracking_codes = function () {
   var fbscript = document.createElement('script');
   fbscript.innerHTML = "fbq('track', 'CompleteRegistration');"
   document.body.insertBefore(fbscript, document.body.firstChild);
+  newElem.type = 'text/javascript'; // add type attribute
+  newElem.setAttribute('src', 'https://howitworks.misterlocation.com/google-tag.js');
   google_script_link.type = 'text/javascript';
   google_script_link.setAttribute('src','//www.googleadservices.com/pagead/conversion.js');
-  newElem.type = 'text/javascript'; // add type attribute
-  newElem.innerHTML = "<br>/* <![CDATA[ */<br>var google_conversion_id = 848665749;<br>var google_conversion_language = 'en';<br>var google_conversion_format = '3';<br>var google_conversion_color = 'ffffff';<br>var google_conversion_label = 'qhk7CIjRrnQQlbnWlAM';<br>var google_remarketing_only = false;<br>/* ]]> */<br></script><br><script type='text/javascript' src='//www.googleadservices.com/pagead/conversion.js'><br></script><br><noscript><br><div style='display:inline;'><br><img height='1' width='1' style='border-style:none;' alt='' src='//www.googleadservices.com/pagead/conversion/848665749/?label=qhk7CIjRrnQQlbnWlAM&amp;guid=ON&amp;script=0'/><br></div><br></noscript><br>";
   document.body.appendChild(newElem);
   document.body.appendChild(google_script_link);
   noscript.innerHTML = '<div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/848665749/?label=qhk7CIjRrnQQlbnWlAM&amp;guid=ON&amp;script=0"/></div>';
