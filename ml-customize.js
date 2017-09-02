@@ -154,15 +154,7 @@ var tracking_codes = function () {
   fbscript.innerHTML = "fbq('track', 'CompleteRegistration');"
   document.body.insertBefore(fbscript, document.body.firstChild);
   newElem.type = 'text/javascript'; // add type attribute
-  newElem.innerHTML = '/* <![CDATA[ */
-var google_conversion_id = 848665749;
-var google_conversion_language = "en";
-var google_conversion_format = "3";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "qhk7CIjRrnQQlbnWlAM";
-var google_remarketing_only = false;
-/* ]]> */
-';
+  newElem.innerHTML = '/* <![CDATA[ */\nvar google_conversion_id = 848665749;\nvar google_conversion_language = "en";\nvar google_conversion_format = "3";\nvar google_conversion_color = "ffffff";\nvar google_conversion_label = "qhk7CIjRrnQQlbnWlAM";\nvar google_remarketing_only = false;\n/* ]]> */';
   google_script_link.type = 'text/javascript';
   google_script_link.setAttribute('src','//www.googleadservices.com/pagead/conversion.js');
   document.body.appendChild(newElem);
