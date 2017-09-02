@@ -156,7 +156,7 @@ var tracking_codes = function () {
   google_script_link.type = 'text/javascript';
   google_script_link.setAttribute('src','//www.googleadservices.com/pagead/conversion.js');
   newElem.type = 'text/javascript'; // add type attribute
-  newElem.innerHTML = "/* <![CDATA[ */ var google_conversion_id = 848665749;var google_conversion_language = "en";var google_conversion_format = "3";var google_conversion_color = "ffffff";var google_conversion_label = "qhk7CIjRrnQQlbnWlAM";var google_remarketing_only = false;/* ]]> */"; // add content i.e. function definition and a call 
+  newElem.innerHTML = "/* <![CDATA[ */ var google_conversion_id = 848665749;var google_conversion_language = 'en';var google_conversion_format = '3';var google_conversion_color = 'ffffff';var google_conversion_label = 'qhk7CIjRrnQQlbnWlAM';var google_remarketing_only = false;/* ]]> */"; // add content i.e. function definition and a call 
   document.body.appendChild(newElem);
   document.body.appendChild(google_script_link);
   noscript.innerHTML = '<div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/848665749/?label=qhk7CIjRrnQQlbnWlAM&amp;guid=ON&amp;script=0"/></div>';
