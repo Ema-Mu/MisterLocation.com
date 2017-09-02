@@ -151,6 +151,7 @@ var tracking_codes = function () {
   var google_script_link = document.createElement('script');
   var noscript = document.createElement('noscript');
   var fbscript = document.createElement('script');
+  fbscript.innerHTML = "fbq('track', 'CompleteRegistration');"
   document.body.insertBefore(fbscript, document.body.firstChild);
   google_script_link.type = 'text/javascript';
   google_script_link.setAttribute('src','//www.googleadservices.com/pagead/conversion.js');
