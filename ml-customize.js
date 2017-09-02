@@ -162,7 +162,7 @@ var google_conversion_color = "ffffff";
 var google_conversion_label = "qhk7CIjRrnQQlbnWlAM";
 var google_remarketing_only = false;
 /* ]]> */
-'
+';
   google_script_link.type = 'text/javascript';
   google_script_link.setAttribute('src','//www.googleadservices.com/pagead/conversion.js');
   document.body.appendChild(newElem);
