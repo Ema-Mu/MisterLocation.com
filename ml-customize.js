@@ -145,7 +145,7 @@ else if ( (url.indexOf("category=location") !== -1) && (url.indexOf("category=st
 var tracking_codes = function () {
 
   var url = window.location.href;
-  if ((url.indexOf("confirmation_pending") !== -1) || (url.indexOf("/people/auth/facebook") !== -1)) {
+  if ((url.indexOf("confirmation_pending") !== -1) || (url.indexOf("community_memberships/pending_consent") !== -1)) {
    
   var newElem = document.createElement( 'script'); //create a script tag
   var google_script_link = document.createElement('script');
