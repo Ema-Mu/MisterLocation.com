@@ -150,6 +150,8 @@ var tracking_codes = function () {
   var newElem = document.createElement( 'script'); //create a script tag
   var google_script_link = document.createElement('script');
   var noscript = document.createElement('noscript');
+  var fbscript = document.createElement('script');
+  document.body.insertBefore(fbscript, document.body.firstChild);
   google_script_link.type = 'text/javascript';
   google_script_link.setAttribute('src','//www.googleadservices.com/pagead/conversion.js');
   newElem.type = 'text/javascript'; // add type attribute
@@ -158,6 +160,7 @@ var tracking_codes = function () {
   document.body.appendChild(google_script_link);
   noscript.innerHTML = '<div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/848665749/?label=qhk7CIjRrnQQlbnWlAM&amp;guid=ON&amp;script=0"/></div>';
   document.body.appendChild(noscript);
+
 
   }
 }
