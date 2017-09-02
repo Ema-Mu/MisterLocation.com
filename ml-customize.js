@@ -87,22 +87,22 @@ var set_labels = function () {
 
 
 
-	if (window.innerWidth >= 768){
+  if (window.innerWidth >= 768){
 
 var selection = document.querySelector("a[title=Grid]") !== null;
 
 if (selection) {
 
-	var grid_btn = document.querySelector("a[title=Grid]");
-	var grid_btn2 = document.querySelector("a[title=List]");
+  var grid_btn = document.querySelector("a[title=Grid]");
+  var grid_btn2 = document.querySelector("a[title=List]");
 
 
 }
 
 else {
 
-	var grid_btn = document.querySelector("a[title=Griglia]");
-	var grid_btn2 = document.querySelector("a[title=Lista]");
+  var grid_btn = document.querySelector("a[title=Griglia]");
+  var grid_btn2 = document.querySelector("a[title=Lista]");
 }
 
 
@@ -121,22 +121,22 @@ var url = window.location.href;
 if ((url.indexOf("category=studio") === -1) && (url.indexOf("category=location") === -1)) {
 
     grid_btn2.classList.remove("selected");
-	grid_btn.classList.remove("selected");
+  grid_btn.classList.remove("selected");
 
 }
 
 else if ( (url.indexOf("category=studio") !== -1) && (url.indexOf("category=location") === -1) ){
 
-	grid_btn.classList.add("selected");
-	grid_btn2.classList.remove("selected");
+  grid_btn.classList.add("selected");
+  grid_btn2.classList.remove("selected");
 }
 
 else if ( (url.indexOf("category=location") !== -1) && (url.indexOf("category=studio") === -1) )
 
 {
 
-	grid_btn2.classList.add("selected");
-	grid_btn.classList.remove("selected");
+  grid_btn2.classList.add("selected");
+  grid_btn.classList.remove("selected");
 }
 }
 };
@@ -153,10 +153,10 @@ var tracking_codes = function () {
   var fbscript = document.createElement('script');
   fbscript.innerHTML = "fbq('track', 'CompleteRegistration');"
   document.body.insertBefore(fbscript, document.body.firstChild);
-  newElem.type = 'text/javascript'; // add type attribute
-  newElem.innerHTML = '/* <![CDATA[ */\nvar google_conversion_id = 848665749;\nvar google_conversion_language = "en";\nvar google_conversion_format = "3";\nvar google_conversion_color = "ffffff";\nvar google_conversion_label = "qhk7CIjRrnQQlbnWlAM";\nvar google_remarketing_only = false;\n/* ]]> */';
   google_script_link.type = 'text/javascript';
   google_script_link.setAttribute('src','//www.googleadservices.com/pagead/conversion.js');
+  newElem.type = 'text/javascript'; // add type attribute
+  newElem.innerHTML = "/* <![CDATA[ */ var google_conversion_id = 848665749;var google_conversion_language = 'en';var google_conversion_format = '3';var google_conversion_color = 'ffffff';var google_conversion_label = 'qhk7CIjRrnQQlbnWlAM';var google_remarketing_only = false;/* ]]> */"; // add content i.e. function definition and a call 
   document.body.appendChild(newElem);
   document.body.appendChild(google_script_link);
   noscript.innerHTML = '<div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/848665749/?label=qhk7CIjRrnQQlbnWlAM&amp;guid=ON&amp;script=0"/></div>';
