@@ -128,3 +128,9 @@ input:-moz-placeholder { /* Firefox 18- */
   font-size: 1.2em;
   vertical-align: baseline;
 }
+
+#listing-contact {
+ background: #4a90e2;
+ color: white;
+
+}
