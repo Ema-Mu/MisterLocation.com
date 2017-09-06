@@ -135,7 +135,7 @@ input:-moz-placeholder { /* Firefox 18- */
 
 }
 
-#sidewinder-wrapper > article > .wrapper > .left-navi > a:nth-child(2) > .left-navi-link-text {
+#sidewinder-wrapper > article > .wrapper > .left-navi > a:nth-child(2) > .left-navi-link-text, #sidewinder-wrapper > article > .wrapper > .left-navi-dropdown>div:nth-child(2), #how_to_use_left_navi_link > div:nth-child(2) {
   
   display:none;
   
@@ -147,4 +147,20 @@ input:-moz-placeholder { /* Firefox 18- */
   content: "FAQ";
   padding: 0 0.5em 0 0.5em;
   
+}
+
+#sidewinder-wrapper > article > .wrapper>.left-navi-dropdown:after  {
+  
+  content: "FAQ";
+ 
+  
+  
+}
+
+#how_to_use_left_navi_link > div:nth-child(1):after {
+
+  content: "FAQ";
+  padding: 0 0.5em 0 0.5em;
+
+
 }
