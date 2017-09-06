@@ -134,3 +134,17 @@ input:-moz-placeholder { /* Firefox 18- */
  color: white;
 
 }
+
+#sidewinder-wrapper > article > .wrapper > .left-navi > a:nth-child(2) > .left-navi-link-text {
+  
+  display:none;
+  
+}
+
+
+#sidewinder-wrapper > article > .wrapper > .left-navi > a:nth-child(2) > .left-navi-link-icon:after {
+  
+  content: "FAQ";
+  padding: 0 0.5em 0 0.5em;
+  
+}
