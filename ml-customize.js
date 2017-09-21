@@ -8,7 +8,7 @@ function myFunction(id) {
 }
 
 
-
+/*
 var set_social_icons = function () {
 
     var branding_content = document.querySelectorAll(".MenuPriority>div:last-child");
@@ -28,7 +28,7 @@ mobile_menu[0].insertAdjacentHTML('afterend', '<div class="mobilesocial"><a href
     }
 
 }
-
+*/
 
 var set_chargeble_icons = function () {
 
