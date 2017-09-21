@@ -308,7 +308,7 @@ var schema = function () {
 var all_func = function () {
 
   
-  set_social_icons();
+  /*set_social_icons();*/
   set_chargeble_icons();
   schema();
   tracking_codes();
