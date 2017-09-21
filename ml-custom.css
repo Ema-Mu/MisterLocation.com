@@ -164,3 +164,8 @@ input:-moz-placeholder { /* Firefox 18- */
 
 
 }
+
+a[title~="Powered"] {
+  display: none !important;
+  
+}
