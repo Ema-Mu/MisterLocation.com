@@ -39,9 +39,9 @@ var set_chargeble_icons = function () {
 
       var divs = document.getElementsByClassName('col-12');
       for (var i = 0, len = divs.length; i < len; ++i) { 
-      if(divs[i].innerHTML.indexOf("<b>Chargeable services and facilities:</b>") != -1) {
+      if(divs[i].innerHTML.indexOf("<b>Chargeable services and facilities:</b>") !== -1) {
 
-      divs[i].setAttribute('id', 'chargeable'); 
+      divs[i].setAttribute('id', 'chargeable');
       /*var columns = divs[i].querySelectorAll('.row > .col-4');
       columns_length = columns.length;
       for (var x = 0, len = columns_length; x < len; ++x) {
@@ -49,10 +49,18 @@ var set_chargeble_icons = function () {
         minirows_length = minirows.length;
         for (var y = 0, len_m = minirows_length; y < len_m; ++y) {
           minirows[y].querySelector('.checkbox-option-checkmark > i').setAttribute('class','fa fa-eur icon-fix icon-margin');
-        }
+    }
       }  
 */
 
+      }
+      }
+
+      var as = document.getElementsByTagName('a');
+      for (var i = 0, len = as.length; i < len; ++i) { 
+      if(as[i].innerHTML.indexOf("Got it!")!== -1) {
+      var url = window.location.href;
+      as[i].setAttribute('href', url + '/contact');
       }
       }
 
