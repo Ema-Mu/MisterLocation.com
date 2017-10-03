@@ -51,18 +51,24 @@ var set_chargeble_icons = function () {
           minirows[y].querySelector('.checkbox-option-checkmark > i').setAttribute('class','fa fa-eur icon-fix icon-margin');
     }
       }  
+      notes
+      var linkz = document.getElementsByClassName('Link__link__3pNRT LoginLinks__link__1GboG');
+      for (var i = 0, len = linkz.length; i < len; ++i) { 
+      if(linkz[i].innerHTML.indexOf("Sign up")!== -1) 
+      {var author = document.getElementsByClassName("listing-author");author[0].setAttribute('class', 'listing-author nascosta');}}
+
 */
 
       }
       }
-
+      /* Getsitecontrol twitch
       var as = document.getElementsByTagName('a');
       for (var i = 0, len = as.length; i < len; ++i) { 
       if(as[i].innerHTML.indexOf("Got it!")!== -1) {
       var url = window.location.href;
       as[i].setAttribute('href', url + '/contact');
       }
-      }
+      } */
 
 
   }
@@ -149,6 +155,16 @@ else if ( (url.indexOf("category=location") !== -1) && (url.indexOf("category=st
 }
 };
 */
+
+
+var no_dupl_title = function() {
+
+var url = window.location.href;
+var title = document.title;
+if(url.indexOf("/it/") !== -1){
+  document.title = title + " - IT";
+}
+}
 
 var tracking_codes = function () {
 
@@ -317,6 +333,7 @@ var all_func = function () {
 
   
   /*set_social_icons();*/
+  no_dupl_title();
   set_chargeble_icons();
   schema();
   tracking_codes();
