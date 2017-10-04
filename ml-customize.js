@@ -51,11 +51,7 @@ var set_chargeble_icons = function () {
           minirows[y].querySelector('.checkbox-option-checkmark > i').setAttribute('class','fa fa-eur icon-fix icon-margin');
     }
       }  
-      notes
-      var linkz = document.getElementsByClassName('Link__link__3pNRT LoginLinks__link__1GboG');
-      for (var i = 0, len = linkz.length; i < len; ++i) { 
-      if(linkz[i].innerHTML.indexOf("Sign up")!== -1) 
-      {var author = document.getElementsByClassName("listing-author");author[0].setAttribute('class', 'listing-author nascosta');}}
+      
 
 */
 
@@ -166,12 +162,26 @@ if(url.indexOf("/it/") !== -1){
 }
 }
 
+var popup = function() {
+
+      var linkz = document.getElementsByClassName('Link__link__3pNRT LoginLinks__link__1GboG');
+      for (var i = 0, len = linkz.length; i < len; ++i) { 
+      if(linkz[i].innerHTML.indexOf("Sign up")!== -1) 
+      {var author = document.getElementsByClassName("listing-author");
+      author[0].setAttribute('class', 'listing-author hide');
+      var popup = document.createElement('script');
+      popup.innerHTML = '<script id="pixel-script-poptin" src="https://cdn.popt.in/pixel.js?id=455d993d63edd" async=true></script>';
+      document.body.appendChild(popup); 
+      }
+      }
+}
+
 var tracking_codes = function () {
 
   var url = window.location.href;
   if ((url.indexOf("confirmation_pending") !== -1) || (url.indexOf("community_memberships/pending_consent") !== -1)) {
    
-  var newElem = document.createElement( 'script'); //create a script tag
+  var newElem = document.createElement('script'); //create a script tag
   var google_script_link = document.createElement('script');
   var noscript = document.createElement('noscript');
   var fbscript = document.createElement('script');
@@ -337,6 +347,7 @@ var all_func = function () {
   set_chargeble_icons();
   schema();
   tracking_codes();
+  popup();
   /*sanitize_name();*/
   /* set_labels(); */
 
