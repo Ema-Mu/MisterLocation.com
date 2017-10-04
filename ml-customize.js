@@ -170,7 +170,9 @@ var popup = function() {
       {var author = document.getElementsByClassName("listing-author");
       author[0].setAttribute('class', 'listing-author hide');
       var popup = document.createElement('script');
-      popup.innerHTML = '<script id="pixel-script-poptin" src="https://cdn.popt.in/pixel.js?id=455d993d63edd" async=true></script>';
+      popup.setAttribute('id', 'pixel-script-poptin');
+      popup.setAttribute('src', 'https://cdn.popt.in/pixel.js?id=455d993d63edd');
+      popup.setAttribute('async', true);
       document.body.appendChild(popup); 
       }
       }
