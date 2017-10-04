@@ -169,11 +169,12 @@ var popup = function() {
       if(linkz[i].innerHTML.indexOf("Sign up")!== -1) 
       {var author = document.getElementsByClassName("listing-author");
       author[0].setAttribute('class', 'listing-author hide');
-      var popup = document.createElement('script');
+      /*var popup = document.createElement('script');
       popup.setAttribute('id', 'pixel-script-poptin');
       popup.setAttribute('src', 'https://cdn.popt.in/pixel.js?id=455d993d63edd');
       popup.setAttribute('async', 'true');
-      document.body.appendChild(popup);
+      document.body.appendChild(popup);*/
+      _gscq.push(['targeting','logged', 'false']);
       break;
       }
       }
