@@ -165,7 +165,7 @@ input:-moz-placeholder { /* Firefox 18- */
 
 }
 
-a[title~="Powered"], img[alt~="Powered"] {
+a[title~="Powered"], img[alt~="Powered"], w-div > span {
   display: none !important;
   
 }
