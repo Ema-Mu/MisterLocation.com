@@ -173,7 +173,8 @@ var popup = function() {
       popup.setAttribute('id', 'pixel-script-poptin');
       popup.setAttribute('src', 'https://cdn.popt.in/pixel.js?id=455d993d63edd');
       popup.setAttribute('async', 'true');
-      /*document.body.appendChild(popup); */
+      document.body.appendChild(popup);
+      break;
       }
       }
 }
