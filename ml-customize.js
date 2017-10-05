@@ -175,6 +175,13 @@ var popup = function() {
       popup.setAttribute('async', 'true');
       document.body.appendChild(popup);*/
       _gscq.push(['targeting','logged', 'false']);
+      break;
+      }
+      }
+}
+
+var dupl_btn = function () {
+
       var node = document.getElementById('sidewinder-wrapper');
       var popupnode = node.parentNode.lastChild;
       var a = popupnode.getElementsByTagName('a')[0];
@@ -184,9 +191,6 @@ var popup = function() {
       a_cln.setAttribute('style', 'margin-left:20px');
       a_cln.removeAttribute('data-track');
       a.parentNode.appendChild(a_cln);
-      break;
-      }
-      }
 }
 
 var tracking_codes = function () {
@@ -361,6 +365,7 @@ var all_func = function () {
   schema();
   tracking_codes();
   popup();
+  dupl_btn();
   /*sanitize_name();*/
   /* set_labels(); */
 
