@@ -182,9 +182,11 @@ var popup = function() {
 
 var dupl_btn = function () {
 
-      var node = document.getElementById('sidewinder-wrapper');
+      /* var node = document.getElementById('sidewinder-wrapper');
       var popupnode = node.parentNode.lastChild;
-      var a = popupnode.getElementsByTagName('a')[0];
+       var a = popupnode.getElementsByTagName('a')[0];*/
+      az = document.querySelectorAll('[data-track="action"]');
+      var a = az[az.length -1]; 
       var a_cln = a.cloneNode(true);
       a_cln.innerHTML = 'Not yet';
       a_cln.setAttribute('href', 'https://howitworks.misterlocation.com/');
