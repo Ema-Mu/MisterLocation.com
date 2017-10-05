@@ -367,7 +367,7 @@ var all_func = function () {
   schema();
   tracking_codes();
   popup();
-  dupl_btn();
+  setTimeout(function(){ dupl_btn();; }, 500);
   /*sanitize_name();*/
   /* set_labels(); */
 
