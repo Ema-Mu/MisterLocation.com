@@ -176,7 +176,7 @@ var popup = function() {
       document.body.appendChild(popup);*/
       _gscq.push(['targeting','logged', 'false']);
       var node = document.getElementById('sidewinder-wrapper');
-      var popupnode = node.parentNode.childNodes[4];
+      var popupnode = node.parentNode.lastChild;
       var a = popupnode.getElementsByTagName('a')[0];
       var a_cln = a.cloneNode(true);
       a_cln.innerHTML = 'Not yet';
