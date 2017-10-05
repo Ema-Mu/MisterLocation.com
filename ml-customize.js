@@ -175,6 +175,15 @@ var popup = function() {
       popup.setAttribute('async', 'true');
       document.body.appendChild(popup);*/
       _gscq.push(['targeting','logged', 'false']);
+      var node = document.getElementById('sidewinder-wrapper');
+      var popupnode = node.parentNode.childNodes[4];
+      var a = popupnode.getElementsByTagName('a')[0];
+      var a_cln = a.cloneNode(true);
+      a_cln.innerHTML = 'Not yet';
+      a_cln.setAttribute('href', 'https://howitworks.misterlocation.com/');
+      a_cln.setAttribute('style', 'margin-left:20px');
+      a_cln.removeAttribute('data-track');
+      a.parentNode.appendChild(a_cln);
       break;
       }
       }
