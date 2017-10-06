@@ -73,9 +73,9 @@ var popup = function() {
         var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
         var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
         if(listing_page.length){
-          listing_price[0].setAttribute('style', 'color:#474747;text-shadow:none;');
+          listing_price[0].setAttribute('style', 'color:#474747 !important;text-shadow:none !important;');
           //listing_price[0].innerHTML = 'Login to see the price';
-          author[0].setAttribute('display', 'inherit');
+          author[0].setAttribute('display', 'inherit !important');
         }
         else if (home !== null) {
           for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
