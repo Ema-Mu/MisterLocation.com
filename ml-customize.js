@@ -21,6 +21,7 @@ function myFunction(id) {
     }
 }
 
+
 /*
 var set_social_icons = function () {
     var branding_content = document.querySelectorAll(".MenuPriority>div:last-child");
@@ -93,9 +94,20 @@ var popup = function() {
         listing_price[0].innerHTML = 'Login to see the price';
         listing_price[0].setAttribute('style', 'visibility:visible');
       } else {
-        for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
+        for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) {
+          listing_price[i].innerHTML = ' ';  
           listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
-        } 
+        }
+        document.addEventListener('scroll', function () {setTimeout(function(){ 
+          var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
+          var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
+          for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) {
+          listing_thumbnail_price[i].innerHTML = ' ';  
+          listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
+        }
+
+
+        }, 500);}); 
       }
       }
       
