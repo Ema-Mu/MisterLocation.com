@@ -169,3 +169,14 @@ a[title~="Powered"], img[alt~="Powered"], w-div > span {
   display: none !important;
   
 }
+
+.listing-price-amount {
+
+   color: transparent;
+   text-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.listing-author {
+
+  display: none;
+}
