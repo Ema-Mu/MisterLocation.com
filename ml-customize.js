@@ -2,6 +2,15 @@ var url = window.location.href;
 var listing_page = document.getElementsByClassName('listing-details-container');
 var home = document.getElementById('homepage-filters');
 
+ var is_logged = function () {
+  var linkz = document.getElementsByClassName('Link__link__3pNRT LoginLinks__link__1GboG');
+    if(linkz.length) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
 
 function myFunction(id) {
     var x = document.getElementById(id);
@@ -59,14 +68,6 @@ if(url.indexOf("/it/") !== -1){
 
 var popup = function() {
 
-  var is_logged = function () {
-  var linkz = document.getElementsByClassName('Link__link__3pNRT LoginLinks__link__1GboG');
-    if(linkz.length) {
-      return false;
-    } else {
-      return true;
-    }
-  }
 
       if(is_logged() === true) {
         var author = document.getElementsByClassName("listing-author");
@@ -76,7 +77,7 @@ var popup = function() {
         if(listing_page.length){
           listing_price[0].setAttribute('style', 'color:#474747 !important;text-shadow:none !important;');
           //listing_price[0].innerHTML = 'Login to see the price';
-          author[0].setAttribute('display', 'inherit !important');
+          //author[0].setAttribute('display', 'inherit !important');
         }
        /* else if (home !== null) {
           for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
@@ -91,7 +92,7 @@ var popup = function() {
         _gscq.push(['targeting','logged', 'false']);
         break;
       }
-      }
+      
 }
 
 
