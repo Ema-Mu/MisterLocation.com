@@ -39,7 +39,7 @@ var set_social_icons = function () {
 var set_chargeble_icons = function () {
 
 
-    if(listing_page.length){
+    if(listing_page.length !== 0){
 
       var divs = document.getElementsByClassName('col-12');
       for (var i = 0, len = divs.length; i < len; ++i) { 
@@ -74,11 +74,11 @@ var popup = function() {
       var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
       if(is_logged() === true) {
         var author = document.getElementsByClassName("listing-author");
-        if(listing_page.length){
+        if(listing_page.length !== 0){
           listing_price[0].setAttribute('style', 'visibility:visible');
           author[0].setAttribute('style', 'display:inherit');
         } 
-        if (home !== null) {
+        if (home !== 0) {
         for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
           listing_thumbnail_price[i].setAttribute('style', 'display:initial');
         }
