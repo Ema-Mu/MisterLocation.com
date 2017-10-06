@@ -172,8 +172,7 @@ a[title~="Powered"], img[alt~="Powered"], w-div > span {
 
 .listing-price-amount {
 
-   color: transparent;
-   text-shadow: 0 0 0.35em rgba(0,0,0,0.5);
+   visibility: hidden;
 }
 /*
 .listing-author {
