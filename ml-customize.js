@@ -75,7 +75,7 @@ var popup = function() {
         var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
         if(listing_page.length){
           var listing_price = document.getElementsByClassName('listing-price-amount');
-          listing_price[0].setAttribute('visibility', 'visible');
+          listing_price[0].setAttribute('style', 'visibility:"visible"');
           //author[0].setAttribute('display', 'inherit !important');
         }
        /* else if (home !== null) {
@@ -92,7 +92,7 @@ var popup = function() {
 
         _gscq.push(['targeting','logged', 'false']);
         listing_price[0].innerHTML = 'Login to see the price';
-        listing_price[0].setAttribute('visibility', 'visible');
+        listing_price[0].setAttribute('style', 'visibility:"visible"');
       }
       
 }
