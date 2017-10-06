@@ -78,7 +78,7 @@ var popup = function() {
           listing_price[0].setAttribute('style', 'visibility:visible');
           author[0].setAttribute('style', 'display:inherit');
         } 
-        if (home !== 0) {
+        if (home !== null) {
         for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
           listing_thumbnail_price[i].setAttribute('style', 'display:initial');
         }
