@@ -77,7 +77,7 @@ var popup = function() {
         if(listing_page.length){
           listing_price[0].setAttribute('style', 'visibility:visible');
           author[0].setAttribute('style', 'display:inherit');
-        } else {
+        } else if (home !== null) {
         for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
           listing_thumbnail_price[i].setAttribute('style', 'display:initial');
         }
@@ -87,8 +87,6 @@ var popup = function() {
           for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) {
          listing_thumbnail_price[i].setAttribute('style', 'display:initial');
         }
-
-
         }, 500);});  
       }
        /* else if (home !== null) {*/
@@ -114,8 +112,6 @@ var popup = function() {
           listing_thumbnail_price[i].innerHTML = ' ';  
           listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
         }
-
-
         }, 500);}); 
       }
       }
