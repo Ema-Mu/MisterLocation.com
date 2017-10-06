@@ -177,10 +177,12 @@ var popup = function() {
           author[0].setAttribute('class', 'listing-author hide');
         }
         if (home !== null) {
-          for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
-            listing_thumbnail_price[i].innerHTML = ' ';
-            listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
-          }
+          setTimeout(function(){  
+            for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
+              listing_thumbnail_price[i].innerHTML = ' ';
+              listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
+            }
+          }, 500);}
         }
         /*var popup = document.createElement('script');
         popup.setAttribute('id', 'pixel-script-poptin');
