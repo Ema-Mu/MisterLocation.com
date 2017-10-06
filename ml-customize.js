@@ -1,6 +1,3 @@
-var url = location.href;
-var listing_page = document.getElementsByClassName('listing-details-container');
-var home = document.getElementsByClassName('home-toolbar');
 
  var is_logged = function () {
   var linkz = document.getElementsByClassName('Link__link__3pNRT LoginLinks__link__1GboG');
@@ -38,7 +35,7 @@ var set_social_icons = function () {
 
 var set_chargeble_icons = function () {
 
-
+    var listing_page = document.getElementsByClassName('listing-details-container');
     if(listing_page.length){
 
       var divs = document.getElementsByClassName('col-12');
@@ -60,7 +57,7 @@ var set_chargeble_icons = function () {
 }
 
 var no_dupl_title = function() {
-
+var url = location.href;
 var title = document.title;
 if(url.indexOf("/it/") !== -1){
   document.title = title + " - IT";
@@ -68,7 +65,8 @@ if(url.indexOf("/it/") !== -1){
 }
 
 var popup = function() {
-
+      var home = document.getElementsByClassName('home-toolbar');
+      var listing_page = document.getElementsByClassName('listing-details-container');
       var listing_price = document.getElementsByClassName('listing-price-amount');
       var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
       var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
@@ -144,7 +142,7 @@ var dupl_btn = function () {
 
 var tracking_codes = function () {
 
-
+  var url = location.href;
   if ((url.indexOf("confirmation_pending") !== -1) || (url.indexOf("community_memberships/pending_consent") !== -1)) {
    
   /*var newElem = document.createElement('script'); //create a script tag
@@ -168,8 +166,10 @@ var tracking_codes = function () {
 
 
 var schema = function () {
+  var home = document.getElementsByClassName('home-toolbar');
   var map = document.getElementsByClassName('origin');
   var h = document.getElementsByTagName('head')[0];
+  var url = location.href;
   /*var address = document.getElementById('origin_loc_address').value; */
 
     if (home.length) {
