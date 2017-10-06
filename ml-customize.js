@@ -90,7 +90,7 @@ var popup = function() {
       } else {
         _gscq.push(['targeting','logged', 'false']);
         listing_price[0].innerHTML = 'Login to see the price';
-        listing_price[0].setAttribute('style', 'visibility:"visible"');
+        listing_price[0].setAttribute('style', 'visibility:visible');
       }
       
 }
