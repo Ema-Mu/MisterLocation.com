@@ -170,7 +170,12 @@ a[title~="Powered"], img[alt~="Powered"], w-div > span {
   
 }
 
-.listing-price-amount, .listing-author {
+.listing-price-amount {
 
    visibility: hidden;
+}
+
+.listing-author {
+
+  display: none;
 }
