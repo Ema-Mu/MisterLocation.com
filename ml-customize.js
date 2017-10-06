@@ -76,10 +76,11 @@ var popup = function() {
         if(listing_page.length){
           listing_price[0].setAttribute('style', 'visibility:visible');
           author[0].setAttribute('style', 'display:inherit');
-        }
+        } else {
         for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
           listing_thumbnail_price[i].setAttribute('style', 'display:initial');
         } 
+      }
        /* else if (home !== null) {*/
         /*var popup = document.createElement('script');
         popup.setAttribute('id', 'pixel-script-poptin');
