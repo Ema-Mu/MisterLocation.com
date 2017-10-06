@@ -175,7 +175,7 @@ a[title~="Powered"], img[alt~="Powered"], w-div > span {
    visibility: hidden;
 }
 
-.listing-author {
+.listing-author, .fluid-thumbnail-grid-image-price {
 
   display: none;
 }
