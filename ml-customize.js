@@ -1,6 +1,5 @@
 var url = window.location.href;
 var listing_page = document.getElementsByClassName('listing-details-container');
-var home = document.getElementById('homepage-filters');
 
  var is_logged = function () {
   var linkz = document.getElementsByClassName('Link__link__3pNRT LoginLinks__link__1GboG');
@@ -72,6 +71,7 @@ var popup = function() {
       var listing_price = document.getElementsByClassName('listing-price-amount');
       var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
       var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
+      var home = document.getElementById('homepage-filters');
       if(is_logged() === true) {
         var author = document.getElementsByClassName("listing-author");
         if(listing_page.length){
@@ -168,7 +168,7 @@ var tracking_codes = function () {
 
 
 var schema = function () {
-
+  var home = document.getElementById('homepage-filters');
   var map = document.getElementsByClassName('origin');
   var h = document.getElementsByTagName('head')[0];
   /*var address = document.getElementById('origin_loc_address').value; */
