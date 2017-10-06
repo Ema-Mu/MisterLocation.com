@@ -80,7 +80,16 @@ var popup = function() {
         } else {
         for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
           listing_thumbnail_price[i].setAttribute('style', 'display:initial');
-        } 
+        }
+        document.addEventListener('scroll', function () {setTimeout(function(){ 
+          var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
+          var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
+          for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) {
+         listing_thumbnail_price[i].setAttribute('style', 'display:initial');
+        }
+
+
+        }, 500);});  
       }
        /* else if (home !== null) {*/
         /*var popup = document.createElement('script');
@@ -95,7 +104,7 @@ var popup = function() {
         listing_price[0].setAttribute('style', 'visibility:visible');
       } else {
         for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) {
-          listing_price[i].innerHTML = ' ';  
+          listing_thumbnail_price[i].innerHTML = ' ';  
           listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
         }
         document.addEventListener('scroll', function () {setTimeout(function(){ 
