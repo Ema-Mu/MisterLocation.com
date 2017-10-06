@@ -169,7 +169,7 @@ a[title~="Powered"], img[alt~="Powered"], w-div > span {
   display: none !important;
   
 }
-
+/*
 .listing-price-amount {
 
    color: transparent;
