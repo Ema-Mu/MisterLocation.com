@@ -168,12 +168,11 @@ var tracking_codes = function () {
 
 
 var schema = function () {
-  var home = document.getElementById('homepage-filters');
   var map = document.getElementsByClassName('origin');
   var h = document.getElementsByTagName('head')[0];
   /*var address = document.getElementById('origin_loc_address').value; */
 
-    if (home !== null) {
+    if (home.length) {
 
 
       /*var titles = document.getElementsByClassName('fluid-thumbnail-grid-image-title');
@@ -224,7 +223,7 @@ var schema = function () {
 
       h.appendChild(el);
 
-    } else  if ((home === null)&&(map.length === 1)) {  
+    } else  if ((home === 0)&&(map.length === 1)) {  
 
      
 
