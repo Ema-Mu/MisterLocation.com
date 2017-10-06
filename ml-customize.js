@@ -173,7 +173,8 @@ var popup = function() {
         var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
         var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
         if(listing_page.length){
-          listing_price[0].innerHTML = 'Login to see the price';
+          listing_price[0].setAttribute('style', 'color:transparent;text-shadow: 0 0 15px rgba(0,0,0,0.5);');
+          //listing_price[0].innerHTML = 'Login to see the price';
           author[0].setAttribute('class', 'listing-author hide');
         }
         else if (home !== null) {
