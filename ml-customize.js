@@ -88,7 +88,7 @@ var popup = function() {
         popup.setAttribute('src', 'https://cdn.popt.in/pixel.js?id=455d993d63edd');
         popup.setAttribute('async', 'true');
         document.body.appendChild(popup);*/
-      } else {
+      } else if (is_logged() === false) {
 
         _gscq.push(['targeting','logged', 'false']);
         listing_price[0].innerHTML = 'Login to see the price';
