@@ -176,7 +176,7 @@ var popup = function() {
           listing_price[0].innerHTML = 'Login to see the price';
           author[0].setAttribute('class', 'listing-author hide');
         }
-        else if (home !== null) {
+        if (home !== null) {
           for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
             listing_thumbnail_price[i].innerHTML = ' ';
             listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
