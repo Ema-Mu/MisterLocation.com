@@ -88,11 +88,14 @@ var popup = function() {
         document.body.appendChild(popup);*/
       } else {
         _gscq.push(['targeting','logged', 'false']);
+        if(listing_page.length){
         listing_price[0].innerHTML = 'Login to see the price';
         listing_price[0].setAttribute('style', 'visibility:visible');
+      } else {
         for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
           listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
         } 
+      }
       }
       
 }
