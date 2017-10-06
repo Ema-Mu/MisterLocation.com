@@ -174,6 +174,7 @@ var popup = function() {
         var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
         if(listing_page.length){
           listing_price[0].innerHTML = 'Login to see the price';
+          author[0].setAttribute('class', 'listing-author hide');
         }
         else if (home !== null) {
           for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
@@ -181,7 +182,6 @@ var popup = function() {
             listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
           }
         }
-        author[0].setAttribute('class', 'listing-author hide');
         /*var popup = document.createElement('script');
         popup.setAttribute('id', 'pixel-script-poptin');
         popup.setAttribute('src', 'https://cdn.popt.in/pixel.js?id=455d993d63edd');
@@ -302,8 +302,8 @@ var schema = function () {
 
      
 
-      var price = document.getElementsByClassName('listing-price-amount');
-      var price_raw = price[0].innerHTML.substr(2);
+     // var price = document.getElementsByClassName('listing-price-amount');
+     // var price_raw = price[0].innerHTML.substr(2);
       var name = document.getElementById('listing-title');
       var images = document.getElementsByClassName('listing-image');
       var url_splitted = url.split( "/listings/");
@@ -354,7 +354,7 @@ var schema = function () {
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "EUR",
-                "price": price_raw,
+               // "price": price_raw,
                 "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
                 "seller" : {
                   "@type" : "Organization",
