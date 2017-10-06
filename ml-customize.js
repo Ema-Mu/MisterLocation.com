@@ -2,6 +2,15 @@ var url = window.location.href;
 var listing_page = document.getElementsByClassName('listing-details-container');
 var home = document.getElementById('homepage-filters');
 
+var is_logged = function () {
+  var linkz = document.getElementsByClassName('Link__link__3pNRT LoginLinks__link__1GboG');
+    if(linkz.length) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
 function myFunction(id) {
     var x = document.getElementById(id);
     if (x.style.display === 'none') {
@@ -11,26 +20,17 @@ function myFunction(id) {
     }
 }
 
-
 /*
 var set_social_icons = function () {
-
     var branding_content = document.querySelectorAll(".MenuPriority>div:last-child");
-    
-
     if (window.innerWidth >= 996) {
-
       branding_content[0].insertAdjacentHTML('afterend', '<a href="https://www.facebook.com/misterlocationOfficial" target="blank"><i class="fa fa-facebook fa-2x"></i></a><a href="https://twitter.com/Mister_Location" target="blank"><i class="fa fa-twitter fa-2x"></i></a><a href="https://www.instagram.com/misterlocation/" target="blank"><i class="fa fa-instagram fa-2x"></i></a>');
-
-
     }
     else {
       var mobile_menu = document.querySelectorAll(".MenuSection>div:last-child");
-
-mobile_menu[0].insertAdjacentHTML('afterend', '<div class="mobilesocial"><a href="https://www.facebook.com/misterlocationOfficial" target="blank"><i class="fa fa-facebook fa-2x"></i></a><a href="https://twitter.com/Mister_Location" target="blank"><i class="fa fa-twitter fa-2x"></i></a><a href="https://www.instagram.com/misterlocation/" target="blank"><i class="fa fa-instagram fa-2x"></i></a></div>');
+      mobile_menu[0].insertAdjacentHTML('afterend', '<div class="mobilesocial"><a href="https://www.facebook.com/misterlocationOfficial" target="blank"><i class="fa fa-facebook fa-2x"></i></a><a href="https://twitter.com/Mister_Location" target="blank"><i class="fa fa-twitter fa-2x"></i></a><a href="https://www.instagram.com/misterlocation/" target="blank"><i class="fa fa-instagram fa-2x"></i></a></div>');
 
     }
-
 }
 */
 
@@ -42,21 +42,7 @@ var set_chargeble_icons = function () {
       var divs = document.getElementsByClassName('col-12');
       for (var i = 0, len = divs.length; i < len; ++i) { 
       if(divs[i].innerHTML.indexOf("<b>Chargeable services and facilities:</b>") !== -1) {
-
       divs[i].setAttribute('id', 'chargeable');
-      /*var columns = divs[i].querySelectorAll('.row > .col-4');
-      columns_length = columns.length;
-      for (var x = 0, len = columns_length; x < len; ++x) {
-        minirows = columns[x].querySelectorAll('.selected');
-        minirows_length = minirows.length;
-        for (var y = 0, len_m = minirows_length; y < len_m; ++y) {
-          minirows[y].querySelector('.checkbox-option-checkmark > i').setAttribute('class','fa fa-eur icon-fix icon-margin');
-    }
-      }  
-      
-
-*/
-
       }
       }
       /* Getsitecontrol twitch
@@ -68,92 +54,8 @@ var set_chargeble_icons = function () {
       }
       } */
 
-
   }
 }
-
-
-
-/* test - 
-
-var sanitize_name = function () {
-
-  var name = document.getElementById("listing-author-link");
-  if (name !== null) {
-  if (name.innerHTML.indexOf(".") !== -1) {
-    string = name.innerHTML.split(".", 1);
-    name.innerHTML = string;
-  }
-
-}
-
-
-}
-
-
-
-
-
-
-var set_labels = function () {
-
-
-
-  if (window.innerWidth >= 768){
-
-var selection = document.querySelector("a[title=Grid]") !== null;
-
-if (selection) {
-
-  var grid_btn = document.querySelector("a[title=Grid]");
-  var grid_btn2 = document.querySelector("a[title=List]");
-
-
-}
-
-else {
-
-  var grid_btn = document.querySelector("a[title=Griglia]");
-  var grid_btn2 = document.querySelector("a[title=Lista]");
-}
-
-
-
-
-grid_btn.setAttribute("href", "/?category=studio");
-grid_btn.innerHTML = "STUDIO";
-grid_btn2.setAttribute("href", "/?category=location");
-grid_btn2.innerHTML = "LOCATION";
-
-var menu = document.querySelector(".visible-tablet > .row > .col-12");
-menu.classList.add("hide");
-
-
-
-if ((url.indexOf("category=studio") === -1) && (url.indexOf("category=location") === -1)) {
-
-    grid_btn2.classList.remove("selected");
-  grid_btn.classList.remove("selected");
-
-}
-
-else if ( (url.indexOf("category=studio") !== -1) && (url.indexOf("category=location") === -1) ){
-
-  grid_btn.classList.add("selected");
-  grid_btn2.classList.remove("selected");
-}
-
-else if ( (url.indexOf("category=location") !== -1) && (url.indexOf("category=studio") === -1) )
-
-{
-
-  grid_btn2.classList.add("selected");
-  grid_btn.classList.remove("selected");
-}
-}
-};
-*/
-
 
 var no_dupl_title = function() {
 
@@ -165,24 +67,21 @@ if(url.indexOf("/it/") !== -1){
 
 var popup = function() {
 
-      var linkz = document.getElementsByClassName('Link__link__3pNRT LoginLinks__link__1GboG');
-      for (var i = 0, len = linkz.length; i < len; ++i) { 
-      if(linkz[i].innerHTML.indexOf("Sign up")!== -1) {
+      if(is_logged() === true) {
         var author = document.getElementsByClassName("listing-author");
         var listing_price = document.getElementsByClassName('listing-price-amount');
         var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
         var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
         if(listing_page.length){
-          //listing_price[0].setAttribute('style', 'color:transparent;text-shadow: 0 0 15px rgba(0,0,0,0.5);');
-          listing_price[0].innerHTML = 'Login to see the price';
-          author[0].setAttribute('class', 'listing-author hide');
+          listing_price[0].setAttribute('style', 'color:#474747;text-shadow:none;');
+          //listing_price[0].innerHTML = 'Login to see the price';
+          author[0].setAttribute('display', 'inherit');
         }
         else if (home !== null) {
           for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) { 
             listing_thumbnail_price[i].innerHTML = ' ';
             listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
           }
-        }
         /*var popup = document.createElement('script');
         popup.setAttribute('id', 'pixel-script-poptin');
         popup.setAttribute('src', 'https://cdn.popt.in/pixel.js?id=455d993d63edd');
@@ -387,6 +286,7 @@ var all_func = function () {
   set_chargeble_icons();
   schema();
   tracking_codes();
+  is_logged();
   popup();
   /* if (window.mobileAndTabletcheck() === false) {setTimeout(function(){ dupl_btn(); }, 500);} */
   /*sanitize_name();*/
