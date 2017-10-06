@@ -68,10 +68,9 @@ if(url.indexOf("/it/") !== -1){
 
 var popup = function() {
 
-
+      var listing_price = document.getElementsByClassName('listing-price-amount');
       if(is_logged() === true) {
         var author = document.getElementsByClassName("listing-author");
-        var listing_price = document.getElementsByClassName('listing-price-amount');
         var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
         var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
         if(listing_page.length){
@@ -89,7 +88,6 @@ var popup = function() {
         popup.setAttribute('async', 'true');
         document.body.appendChild(popup);*/
       } else if (is_logged() === false) {
-
         _gscq.push(['targeting','logged', 'false']);
         listing_price[0].innerHTML = 'Login to see the price';
         listing_price[0].setAttribute('style', 'visibility:"visible"');
