@@ -99,20 +99,21 @@ var popup = function() {
         if(listing_page.length){
         listing_price[0].innerHTML = 'Login to see the price';
         listing_price[0].setAttribute('style', 'visibility:visible');
-      } else {
-        for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) {
-          listing_thumbnail_price[i].innerHTML = ' ';  
-          listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
-        }
-        document.addEventListener('scroll', function () {setTimeout(function(){ 
-          var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
-          var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
+      } 
+        if (home.length) {
           for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) {
-          listing_thumbnail_price[i].innerHTML = ' ';  
-          listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
+            listing_thumbnail_price[i].innerHTML = ' ';  
+            listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
+          }
+          document.addEventListener('scroll', function () {setTimeout(function(){ 
+            var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
+            var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
+            for (var i = 0, len = listing_thumbnail_price.length; i < len; ++i) {
+            listing_thumbnail_price[i].innerHTML = ' ';  
+            listing_thumbnail_quantity[i].innerHTML = 'Login to see the price';
+          }
+          }, 500);}); 
         }
-        }, 500);}); 
-      }
       }
       
 }
@@ -125,11 +126,9 @@ window.mobileAndTabletcheck = function() {
   return check;
 }; */
 
-var dupl_btn = function () {
 
-      /* var node = document.getElementById('sidewinder-wrapper');
-      var popupnode = node.parentNode.lastChild;
-       var a = popupnode.getElementsByTagName('a')[0];*/
+/*
+var dupl_btn = function () {
       az = document.querySelectorAll('[data-track="action"]');
       var a = az[az.length -1]; 
       var a_cln = a.cloneNode(true);
@@ -138,7 +137,7 @@ var dupl_btn = function () {
       a_cln.setAttribute('style', 'margin-left:20px');
       a_cln.removeAttribute('data-track');
       a.parentNode.appendChild(a_cln);
-}
+} */
 
 var tracking_codes = function () {
 
@@ -170,6 +169,7 @@ var schema = function () {
   var map = document.getElementsByClassName('origin');
   var h = document.getElementsByTagName('head')[0];
   var url = location.href;
+  var listing_page = document.getElementsByClassName('listing-details-container');
   /*var address = document.getElementById('origin_loc_address').value; */
 
     if (home.length) {
@@ -223,7 +223,9 @@ var schema = function () {
 
       h.appendChild(el);
 
-    } else  if ((home === 0)&&(map.length === 1)) {  
+    } 
+
+    if ((listing_page.length)&&(map.length === 1)) {  
 
      
 
