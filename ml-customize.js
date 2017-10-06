@@ -71,10 +71,10 @@ var popup = function() {
 
       if(is_logged() === true) {
         var author = document.getElementsByClassName("listing-author");
-        var listing_price = document.getElementsByClassName('listing-price-amount');
         var listing_thumbnail_price = document.getElementsByClassName('fluid-thumbnail-grid-image-price');
         var listing_thumbnail_quantity = document.getElementsByClassName('fluid-thumbnail-grid-image-quantity');
         if(listing_page.length){
+          var listing_price = document.getElementsByClassName('listing-price-amount');
           listing_price[0].setAttribute('style', 'color:#474747 !important;text-shadow:none !important;');
           //listing_price[0].innerHTML = 'Login to see the price';
           //author[0].setAttribute('display', 'inherit !important');
@@ -89,8 +89,9 @@ var popup = function() {
         popup.setAttribute('src', 'https://cdn.popt.in/pixel.js?id=455d993d63edd');
         popup.setAttribute('async', 'true');
         document.body.appendChild(popup);*/
+      } else {
+
         _gscq.push(['targeting','logged', 'false']);
-        break;
       }
       
 }
