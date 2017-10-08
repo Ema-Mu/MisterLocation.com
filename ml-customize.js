@@ -320,5 +320,6 @@ var all_func = function () {
 
 }
 
+window.addEventListener('DOMContentLoaded', all_func, true);
 /* window.onresize = set_labels; */
-window.onload = all_func;
+/*window.onload = all_func; */
