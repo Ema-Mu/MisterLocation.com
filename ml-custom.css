@@ -175,7 +175,27 @@ input:-moz-placeholder { /* Firefox 18- */
    visibility: hidden;
 }
 
-.listing-author, .fluid-thumbnail-grid-image-price {
+.listing-author-avatar, .listing-author-name, .fluid-thumbnail-grid-image-price {
 
   display: none;
+}
+
+.listing-author-details {
+  min-height: auto;
+  padding-left: 0;
+}
+
+@media screen and (min-width:768px){
+  
+  .listing-author-details {
+  margin-top: 0;
+}
+}
+
+
+@media screen and (max-width:768px){
+  
+  .listing-author-details {
+  margin-bottom: 0;
+}
 }
