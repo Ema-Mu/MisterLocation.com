@@ -165,17 +165,17 @@ input:-moz-placeholder { /* Firefox 18- */
 
 }
 
-.bubble-price, a[title="List"], a[title~="Powered"], img[alt~="Powered"], w-div > span {
+/* .bubble-price, */a[title="List"], a[title~="Powered"], img[alt~="Powered"], w-div > span {
   display: none !important;
   
 }
-
+/*
 .listing-price-amount {
 
    visibility: hidden;
-}
+} */
 
-.listing-author-avatar, .listing-author-name, .fluid-thumbnail-grid-image-price {
+.listing-author-avatar, .listing-author-name /*.fluid-thumbnail-grid-image-price */ {
 
   display: none;
 }
