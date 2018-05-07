@@ -1,4 +1,4 @@
-# MisterLocation.com
+# MisterLocation.com: a photo studio markeplace
 MisterLocation is a photo studio and locations marketplace, that means that everybody can post listings to rent out their own photography studios or locations and, of course, people in need of this kind of spaces can easily discover or search them.
 
 The project is based on the open-source framework Sharetribe (available here on Github) that is in turn developed in Ruby on Rails.
@@ -47,10 +47,8 @@ About the Javascript part, I really had fun searching creative solutions and imp
 Of course I had to play a bit with the loading order of the functions and add an event listener to fire them once the DOM was loaded.
 
 Moreover, instead of inserting the whole scripts directly in the header, I kept them here and I loaded them through two link tags. This way the whole set up was definitely cleaner and I could keep track of the changes and roll back to previous versions if necessary.
-
-
-
-
+  
+  
 ## DONATIONS:
 
 As I said, all this is just a quick fix that helped me to overcome the limits of the Sharetribe’s hosted version of MisterLocation, so be aware that this probably is not gonna solve all of your problems.
