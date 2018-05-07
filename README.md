@@ -1,4 +1,4 @@
-# MisterLocation.com: a photo studio marketplace
+# MisterLocation: a photo studio marketplace
 MisterLocation is a photo studio and locations marketplace, that means that everybody can post listings to rent out their own photography studios or locations and, of course, people in need of this kind of spaces can easily discover or search them.
 
 The project is based on the [open-source framework Sharetribe](https://github.com/sharetribe/sharetribe) that is in turn developed in Ruby on Rails.
