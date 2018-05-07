@@ -56,6 +56,7 @@ As I said, all this is just a quick fix that helped me to overcome the limits of
 You can use the code for free though and, in case you do or if you like my project MisterLocation (that is still free to use, i.e. we do not get any commission or money), please make a donation to one of  the following address so I can keep up the good work:
 
 <br />
+
 *BITCOIN*: 39uqCRdDBThUsv8xZyUBQR35xHjW1ZWS23
 
 *ETHEREUM*: 0x7a6c9c6e8e50ab6eec38f50ac82b63d4149bc6e7
