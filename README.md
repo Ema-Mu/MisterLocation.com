@@ -4,7 +4,7 @@ MisterLocation is a photo studio and locations marketplace, that means that ever
 The project is based on the open-source framework Sharetribe (available here on Github) that is in turn developed in Ruby on Rails.
 The creators of the software, while making the open source version available to the public, offer a specific version of it as a Saas. This way though, even if you do not have the hassle of setting up a server, deploying the software and maintaining the whole thing, you have a very limited access to the backend and almost no access to the database.
 
-At first I decided to open my <a href=“https://www.misterlocation.com/en/”>photo studio marketplace</a> with their hosted version anyway and I found a solution that, at least in the first period, was geeky enough for me. In the framework’s admin panel, in fact, there is the possibility to insert CSS and JS code that is loaded into the header of your website. 
+At first I decided to open my [photo studio marketplace](https://www.misterlocation.com/en/) with their hosted version anyway and I found a solution that, at least in the first period, was geeky enough for me. In the framework’s admin panel, in fact, there is the possibility to insert CSS and JS code that is loaded into the header of your website. 
 I was very aware, and you should be too, that this is just a temporary solution since this way the whole code is gonna be loaded on every single page, even on those ones that you do not want to target. That could lead to a side effect that you can easily imagine: if you make heavy use of JavaScript, this is gonna slow down your site.
 
 Test after test, I decided to create a repository to keep track of all the changes. I reached some nice results. With some creativity, and even using only CSS, I have been able to:
@@ -47,8 +47,8 @@ Of course I had to play a bit with the loading order of the functions and add an
 Moreover, instead of inserting the whole scripts directly in the header, I kept them here and I loaded them through two link tags. This way the whole set up was definitely cleaner and I could keep track of the changes and roll back to previous versions if necessary.
 
 
-<div style=“background-color: #d2e4f9”>
-DONATIONS:
+
+##DONATIONS:
 
 As I said, all this is just a quick fix that helped me to overcome the limits of the Sharetribe’s hosted version of MisterLocation, so be aware that this probably is not gonna solve all of your problems.
 You can use the code for free though and, in case you do or if you like my project MisterLocation (that is still free to use, i.e. we do not get any commission or money), please make a donation to one of  the following address so I can keep up the good work:
@@ -67,6 +67,6 @@ BITCOIN CASH: 33aWuRGKdbUpe8VUDb3W7i4anKebos2s5e
 
 If you need any clarification, I would be glad to assist you. Thank you.
 
-</div>
+
 
  
