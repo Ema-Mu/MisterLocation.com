@@ -7,6 +7,7 @@ The creators of the software, while making the open source version available to 
 At first I decided to open my [photo studio marketplace](https://www.misterlocation.com/en/) with their hosted version anyway and I found a solution that, at least in the first period, was geeky enough for me. In the framework’s admin panel, in fact, there is the possibility to insert CSS and JS code that is loaded into the header of your website. 
 I was very aware, and you should be too, that this is just a temporary solution since this way the whole code is gonna be loaded on every single page, even on those ones that you do not want to target. That could lead to a side effect that you can easily imagine: if you make heavy use of JavaScript, this is gonna slow down your site.
 
+## CSS
 Test after test, I decided to create a repository to keep track of all the changes. I reached some nice results. With some creativity, and even using only CSS, I have been able to:
 
 <ul>
@@ -27,6 +28,7 @@ Test after test, I decided to create a repository to keep track of all the chang
 </ul>
 
 
+## JS
 About the Javascript part, I really had fun searching creative solutions and implementing them. Remember thought to consider them more as a temporary “hack” then stable solutions. I repeat: they are not foolproof. Anyway, with a bit of fantasy I could be able to:
 
 
