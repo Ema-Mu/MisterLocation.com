@@ -48,7 +48,7 @@ Moreover, instead of inserting the whole scripts directly in the header, I kept 
 
 
 
-##DONATIONS:
+## DONATIONS:
 
 As I said, all this is just a quick fix that helped me to overcome the limits of the Sharetribe’s hosted version of MisterLocation, so be aware that this probably is not gonna solve all of your problems.
 You can use the code for free though and, in case you do or if you like my project MisterLocation (that is still free to use, i.e. we do not get any commission or money), please make a donation to one of  the following address so I can keep up the good work:
