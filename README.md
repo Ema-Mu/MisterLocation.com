@@ -46,29 +46,7 @@ About the Javascript part, I really had fun searching creative solutions and imp
 
 Of course I had to play a bit with the loading order of the functions and add an event listener to fire them once the DOM was loaded.
 
-Moreover, instead of inserting the whole scripts directly in the header, I kept them here and I loaded them through two link tags. This way the whole set up was definitely cleaner and I could keep track of the changes and roll back to previous versions if necessary.  
-
-<br />
-  
-## DONATIONS:
-
-As I said, all this is just a quick fix that helped me to overcome the limits of the Sharetribe’s hosted version of MisterLocation, so be aware that this probably is not gonna solve all of your problems.
-You can use the code for free though and, in case you do or if you like my project MisterLocation (that is still free to use, i.e. we do not get any commission or any money), please make a donation to one of  the following address so I can keep up the good work:
-
-<br />
-
-BITCOIN: 39uqCRdDBThUsv8xZyUBQR35xHjW1ZWS23
-
-ETHEREUM: 0x7a6c9c6e8e50ab6eec38f50ac82b63d4149bc6e7
-
-LITECOIN: MTTwk9mtjWkjBDT83u2towTHuDjbDdLXUH
-
-RIPPLE: rDsbeomae4FXwgQTJp9Rs64Qg9vDiTCdBv (destination tag: 77572395)
-
-BITCOIN CASH: 33aWuRGKdbUpe8VUDb3W7i4anKebos2s5e
-
-<br />
-If you need any clarification on the code, I would be glad to assist you. Thank you.
+Moreover, instead of inserting the whole scripts directly in the header, I kept them here and I loaded them through two link tags. This way the whole set up was definitely cleaner and I could keep track of the changes and roll back to previous versions if necessary.
 
 
 
